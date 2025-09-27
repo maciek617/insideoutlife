@@ -5,9 +5,10 @@
     <HomeWhy />
     <HomeQuote />
 
-    <div class="mt-20">tu bedzie snippet apki</div>
-    <HomeEnd />
-    <HomeFaq />
+    <HomeImages class="lg:mt-32" />
+
+    <HomeEnd class="lg:mt-44" />
+    <HomeFaq class="lg:mt-24" />
     <HomeMotivate />
   </div>
 </template>

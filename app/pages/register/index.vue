@@ -1,9 +1,9 @@
 <template>
   <div class="text-white p-4 min-h-[100vh] flex justify-center items-center">
     <div class="hidden lg:block flex-1 h-fit w-full">
-      <img
+      <NuxtImg
         src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg"
-        alt=""
+        alt="image"
         class="w-full h-full object-cover"
       />
       <p class="italic text-center mt-2 text-xl">

@@ -6,7 +6,13 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ["~/assets/css/main.css"],
 
-  modules: ["@nuxt/image", "@nuxt/icon", "@nuxt/fonts", "@nuxtjs/supabase"],
+  modules: [
+    "@nuxt/image",
+    "@nuxt/icon",
+    "@nuxt/fonts",
+    "@nuxtjs/supabase",
+    "@nuxtjs/seo",
+  ],
   supabase: {
     redirect: false,
   },
@@ -20,5 +26,15 @@ export default defineNuxtConfig({
     public: {
       supabaseAnonKey: process.env.SUPABASE_KEY, // 👀 tylko anon key na froncie
     },
+  },
+  site: {
+    baseUrl: "https://insideout.pl",
+    name: "InsideOut - wsparcie dla mężczyzn",
+    titleTemplate: "%s | InsideOut",
+    description: "Strona z artykułami i poradami dla mężczyzn po zdradzie",
+    author: "Maciej",
+    twitter: "@twoj_twitter",
+    ogImage: "/og-image.png",
+    ogType: "website",
   },
 });
