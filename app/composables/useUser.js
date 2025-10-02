@@ -7,6 +7,7 @@ export function useUser() {
   const userCommentsCount = ref(0);
 
   async function getUser() {
+    if (userData.value) return;
     const { data, error } = await supabase
       .from("users")
       .select()

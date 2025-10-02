@@ -18,11 +18,11 @@
       <textarea
         v-model="content"
         placeholder="Pamiętaj możesz napisać wszystko..."
-        class="w-full p-2"
+        class="w-full p-2 border-b border-gray-500"
       ></textarea>
     </div>
 
-    <UseButton text="Zapisz" @click="handleCreateJournalEntry()" class="mt-4" />
+    <UseButton text="Zapisz" @click="handleCreateJournalEntry" class="mt-4" />
   </div>
 </template>
 
@@ -44,7 +44,7 @@ const mood = ref();
 async function handleCreateJournalEntry() {
   if (!mood.value) return;
   if (content.value.length > 100) return;
-  await createJournalEntry(content.value, mood.value);
+  await createJournalEntry(content.value.trimEnd(), mood.value);
   content.value = "";
 }
 </script>

@@ -36,9 +36,17 @@
           {{ block.data }}
         </blockquote>
 
+        <!-- Heading -->
+        <div v-if="block.type === 'heading'">
+          <p
+            class="text-orange-400 text-2xl font-bold lg:text-3xl 2xl:text-4xl"
+          >
+            {{ block.data }}
+          </p>
+        </div>
         <!-- Lista punktowana (jeśli w osobnym bloku) -->
         <ul v-else-if="block.type === 'list'" class="list-disc pl-6">
-          <li v-for="(item, j) in block.data" :key="j" class="list-none">
+          <li v-for="(item, j) in block.data" :key="j" class="list-none my-4">
             👉 {{ item }}
           </li>
         </ul>

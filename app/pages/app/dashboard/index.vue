@@ -31,7 +31,7 @@
         <DashboardWidget
           title="👋🏻 Najnowszy artykuł"
           :text="latestArticle?.title"
-          :link="'/app/articles/' + latestArticle?.slug"
+          :link="'/articles/' + latestArticle?.slug"
           :button="true"
           :btn-text="'Przejdź'"
           class="flex-1"
