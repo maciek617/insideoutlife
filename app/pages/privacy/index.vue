@@ -38,7 +38,7 @@
     <p>
       W razie pytań dotyczących prywatności napisz do nas:
       <a href="mailto:kontakt@twojaaplikacja.pl" class="text-blue-600"
-        >kontakt@twojaaplikacja.pl</a
+        >kontakt@insideoutlife.pl</a
       >
     </p>
   </div>

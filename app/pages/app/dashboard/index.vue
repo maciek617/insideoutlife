@@ -16,14 +16,14 @@
           title="📝 Dziennik Emocji"
           text="Dzisiaj nie dodałeś wpisu emocji ☹️"
           link="/app/journal"
-          :date="new Date().toLocaleDateString()"
+          :date="new Date().toLocaleDateString('pl-PL')"
           :button="true"
           class="flex-1"
         />
 
         <DashboardWidget
           title="Psycholog"
-          text="Jeśli masz wiedzę psychologiczną i chcesz pomóc osobom, które tego potrzebują napisz na: test@google.com"
+          text="Jeśli masz wiedzę psychologiczną i chcesz pomóc osobom, które tego potrzebują napisz na: kontakt@insideoutlife.pl"
           link="/"
           :button="false"
           class="flex-1"
