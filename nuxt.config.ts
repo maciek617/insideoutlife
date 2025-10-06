@@ -28,9 +28,9 @@ export default defineNuxtConfig({
     },
   },
   site: {
-    baseUrl: "https://insideout.pl",
-    name: "InsideOut - wsparcie dla mężczyzn",
-    titleTemplate: "%s | InsideOut",
+    baseUrl: "https://insideoutlife.pl",
+    name: "InsideOutLife - wsparcie dla mężczyzn",
+    titleTemplate: "%s | InsideOutLife",
     description: "Strona z artykułami i poradami dla mężczyzn po zdradzie",
     author: "Maciej",
     twitter: "@twoj_twitter",
