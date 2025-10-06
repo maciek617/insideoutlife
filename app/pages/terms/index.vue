@@ -41,7 +41,7 @@
     <h2 class="text-xl font-semibold mt-6 mb-2">5. Kontakt</h2>
     <p>
       W sprawach dotyczących aplikacji prosimy o kontakt:
-      <a href="mailto:kontakt@twojaaplikacja.pl" class="text-blue-600"
+      <a href="mailto:kontakt@insideoutlife.pl" class="text-blue-600"
         >kontakt@insideoutlife.pl</a
       >
     </p>

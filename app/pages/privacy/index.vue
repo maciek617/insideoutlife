@@ -37,7 +37,7 @@
     <h2 class="text-xl font-semibold mt-6 mb-2">4. Kontakt</h2>
     <p>
       W razie pytań dotyczących prywatności napisz do nas:
-      <a href="mailto:kontakt@twojaaplikacja.pl" class="text-blue-600"
+      <a href="mailto:kontakt@insideoutlife.pl" class="text-blue-600"
         >kontakt@insideoutlife.pl</a
       >
     </p>
