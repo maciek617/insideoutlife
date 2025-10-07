@@ -1,9 +1,10 @@
 <template>
   <div class="min-h-100vh h-full min-h-[100vh] text-white px-4">
+    <UseIntroNav />
     <HomeIntro />
     <HomeHero />
     <HomeWhy />
-    <HomeQuote />
+    <HomeQuote class="lg:mt-32 xl:mt-44" />
 
     <HomeImages class="lg:mt-32" />
 

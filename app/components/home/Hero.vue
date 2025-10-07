@@ -1,10 +1,14 @@
 <template>
   <div class="mt-20 lg:flex items-center justify-center gap-10 xl:gap-20">
-    <div v-for="b in base" :key="b.name" class="mt-10">
+    <div
+      v-for="b in base"
+      :key="b.name"
+      class="max-w-sm w-full mx-auto mt-10 bg-[#212121] rounded shadow-xl p-4 lg:mx-0"
+    >
       <p class="text-2xl text-center">
         {{ b.name }}
       </p>
-      <p class="text-center">{{ b.sub_name }}</p>
+      <p class="text-center mt-4 text-gray-300">{{ b.sub_name }}</p>
     </div>
   </div>
 </template>

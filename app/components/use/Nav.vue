@@ -35,7 +35,7 @@
     <nav
       class="fixed bottom-0 left-1/2 -translate-x-1/2 z-50 w-full bg-[#111] py-2 shadow-xl lg:hidden"
     >
-      <ul class="flex gap-3 justify-center text-2xl">
+      <ul class="flex gap-3 justify-center text-2xl md:text-4xl">
         <NuxtLink to="/app/dashboard">
           <li class="bg-[#262626] p-2 rounded shadow-lg">🏠</li>
         </NuxtLink>

@@ -1,6 +1,10 @@
 <template>
   <div class="mt-20">
     <HomeHeader text="Poznaj aplikację!" />
+    <p class="mt-4 lg:text-lg xl:text-xl">
+      Sprawdź jak wygląda wnętrze aplikacji, by nic Cię nie zaskoczyło po
+      zalogowaniu
+    </p>
     <div class="flex flex-wrap gap-10 justify-center mt-10">
       <NuxtImg
         src="/1.png"
