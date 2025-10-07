@@ -50,7 +50,7 @@
           <li class="bg-[#262626] p-2 rounded shadow-lg">📚</li>
         </NuxtLink>
 
-        <NuxtLink to="/profile">
+        <NuxtLink to="/app/profile">
           <li class="bg-[#262626] p-2 rounded shadow-lg">👤</li>
         </NuxtLink>
       </ul>
