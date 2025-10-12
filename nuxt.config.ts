@@ -12,6 +12,7 @@ export default defineNuxtConfig({
     "@nuxt/fonts",
     "@nuxtjs/supabase",
     "@nuxtjs/seo",
+    "@nuxtjs/sitemap",
   ],
   supabase: {
     redirect: false,
@@ -29,6 +30,7 @@ export default defineNuxtConfig({
   },
   site: {
     baseUrl: "https://insideoutlife.pl",
+    url: "https://insideoutlife.pl",
     name: "InsideOutLife - wsparcie dla mężczyzn",
     titleTemplate: "%s | InsideOutLife",
     description: "Strona z artykułami i poradami dla mężczyzn po zdradzie",
