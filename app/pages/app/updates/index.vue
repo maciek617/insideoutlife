@@ -1,7 +1,9 @@
 <template>
   <div class="container mx-auto min-h-[100vh] text-white">
     <h1 class="text-center pt-20">
-      Tutaj będą wzmianki o nowych aktualizacjach
+      <p>
+        14.10.2025 Updated - Dodanie dostępnych aplikacji wsparcia mężczyzn.
+      </p>
     </h1>
   </div>
 </template>
