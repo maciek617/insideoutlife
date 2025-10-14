@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-[#212121] max-w-sm p-4 rounded-lg shadow-xl w-full">
+  <div class="bg-[#212121] max-w-xs p-4 rounded-lg shadow-xl w-full lg:max-w-sm">
     <div class="flex justify-between items-center">
       <p class="font-bold text-xl">{{ props.title }}</p>
       <UseBadge v-if="props.isVerified" />
