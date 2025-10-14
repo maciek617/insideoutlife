@@ -12,21 +12,15 @@
       <ul
         class="flex gap-14 text-xl text-gray-400 flex-col lg:flex-row pt-20 lg:pt-0"
       >
-        <NuxtLink to="/articles">
-          <li class="cursor-pointer hover:text-orange-400 transition-all">
-            Artykuły
-          </li>
-        </NuxtLink>
-        <NuxtLink to="/tools">
-          <li class="cursor-pointer hover:text-orange-400 transition-all">
-            Dodatkowe narzędzia
-          </li>
-        </NuxtLink>
-        <NuxtLink to="/contact">
-          <li class="cursor-pointer hover:text-orange-400 transition-all">
-            Kontakt
-          </li>
-        </NuxtLink>
+        <li class="cursor-pointer hover:text-orange-400 transition-all">
+          <NuxtLink to="/articles"> Artykuły </NuxtLink>
+        </li>
+        <li class="cursor-pointer hover:text-orange-400 transition-all">
+          <NuxtLink to="/tools"> Dodatkowe narzędzia </NuxtLink>
+        </li>
+        <li class="cursor-pointer hover:text-orange-400 transition-all">
+          <NuxtLink to="/contact"> Kontakt </NuxtLink>
+        </li>
       </ul>
     </nav>
   </div>

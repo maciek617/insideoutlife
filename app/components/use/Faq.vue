@@ -29,7 +29,7 @@ const faqs = ref([
     expanded: false,
   },
   {
-    question: "Czy korzystanie jest darmowe?",
+    question: "Czy korzystanie z aplikacji jest darmowe?",
     answer: "Tak, korzystanie jest w pełni darmowe",
     expanded: false,
   },
