@@ -1,6 +1,9 @@
 <template>
   <div class="p-2 flex-1 max-w-2xl lg:mx-auto">
-    <div class="flex-1 flex items-start gap-2">
+    <UseTooltip
+      text="Napisz coś co czujesz, kliknij opublikuj i to wszystko, poszło! Reaguj, komentuj bądź aktywny!"
+    />
+    <div class="flex-1 flex items-start gap-2 mt-4">
       <!-- Avatar: sztywne wymiary i brak rozciągania -->
       <div
         class="bg-orange-400 w-10 h-10 rounded-full flex items-center justify-center"

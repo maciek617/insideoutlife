@@ -22,14 +22,14 @@
         />
 
         <DashboardWidget
-          title="Psycholog"
+          title="👨🏼‍⚕️ Psycholog"
           text="Jeśli masz wiedzę psychologiczną i chcesz pomóc osobom, które tego potrzebują napisz na: kontakt@insideoutlife.pl"
           link="/"
           :button="false"
           class="flex-1"
         />
         <DashboardWidget
-          title="👋🏻 Najnowszy artykuł"
+          title="📋 Najnowszy artykuł"
           :text="latestArticle?.title"
           :link="'/articles/' + latestArticle?.slug"
           :button="true"

@@ -3,6 +3,9 @@
     <UseNav class="flex-1" />
 
     <div class="flex-1 text-white lg:ml-24 xl:ml-52" v-if="userData">
+      <UseTooltip
+        text="Tę zakładkę widzisz tylko ty, możesz tutaj zmienić hasło, usunąć konto, podglądnąć twoje statystyki, wybrać badge a także zmienić pseudonim."
+      />
       <ProfileWelcome :nick="userData.nick" />
 
       <ProfileMain :nick="userData.nick" />

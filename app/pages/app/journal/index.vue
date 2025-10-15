@@ -3,6 +3,9 @@
     <UseNav class="flex-1" />
 
     <div class="flex-1 lg:ml-24 xl:ml-52" v-if="!loading">
+      <UseTooltip
+        text="Wybierz emotkę, która Cię dziś opisuje, dodaj opcjonalnie opis i na końcu kliknij zapisz, od teraz codziennie możesz śledzić twój mood."
+      />
       <JournalCreate v-if="!entry" :emotes="emotes" />
       <div v-else>
         <IconsDone />
