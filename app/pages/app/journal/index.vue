@@ -12,12 +12,14 @@
         @show-toast="showToast = true"
       />
 
-      <UseToast
-        v-if="showToast"
-        title="Udało się!"
-        desc="Dodałeś wpis do swojego dziennika!"
-        type="success"
-      />
+      <div v-if="showToast">
+        <UseToast
+          title="Udało się!"
+          desc="Dodałeś wpis do swojego dziennika!"
+          type="success"
+        />
+      </div>
+      
       <div v-if="entry">
         <IconsDone />
         <p class="text-center text-white text-xl lg:text-2xl xl:text-3xl">
