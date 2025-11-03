@@ -34,7 +34,6 @@ export function useJournal() {
       .limit(1) // sprawdzamy tylko czy jest
       .maybeSingle(); // jak nie ma, zwróci null zamiast błędu
 
-    console.log(data);
     if (error) {
       console.error(error);
     } else if (data) {

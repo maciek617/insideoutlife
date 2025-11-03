@@ -21,7 +21,6 @@
         class="w-full p-2 border-b border-gray-500"
       ></textarea>
     </div>
-
     <UseButton text="Zapisz" @click="handleCreateJournalEntry" class="mt-4" />
   </div>
 </template>
@@ -38,6 +37,8 @@ const props = defineProps<{
   emotes: Emote[];
 }>();
 
+const emits = defineEmits(["showToast"]);
+
 const content = ref("");
 const mood = ref();
 
@@ -46,6 +47,7 @@ async function handleCreateJournalEntry() {
   if (content.value.length > 100) return;
   await createJournalEntry(content.value.trimEnd(), mood.value);
   content.value = "";
+  emits('showToast')
 }
 </script>
 

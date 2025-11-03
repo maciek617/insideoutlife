@@ -6,6 +6,8 @@
       <UseTooltip
         text="Tę zakładkę widzisz tylko ty, możesz tutaj zmienić hasło, usunąć konto, podglądnąć twoje statystyki, wybrać badge a także zmienić pseudonim."
       />
+
+
       <ProfileWelcome :nick="userData.nick" />
 
       <ProfileMain :nick="userData.nick" />
@@ -40,6 +42,8 @@ onMounted(async () => {
   await getUserPostsCount();
   await getUserCommentsCount();
 });
+
+
 </script>
 
 <style></style>

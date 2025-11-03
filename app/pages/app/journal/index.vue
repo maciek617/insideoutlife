@@ -6,8 +6,19 @@
       <UseTooltip
         text="Wybierz emotkę, która Cię dziś opisuje, dodaj opcjonalnie opis i na końcu kliknij zapisz, od teraz codziennie możesz śledzić twój mood."
       />
-      <JournalCreate v-if="!entry" :emotes="emotes" />
-      <div v-else>
+      <JournalCreate
+        v-show="!entry"
+        :emotes="emotes"
+        @show-toast="showToast = true"
+      />
+
+      <UseToast
+        v-if="showToast"
+        title="Udało się!"
+        desc="Dodałeś wpis do swojego dziennika!"
+        type="success"
+      />
+      <div v-if="entry">
         <IconsDone />
         <p class="text-center text-white text-xl lg:text-2xl xl:text-3xl">
           Gratulacje!! Dziś już zapisałeś swoje uczucia. Wróć koniecznie jutro!
@@ -43,6 +54,7 @@ const emotes = ref([
 
 const allMoods = ref<any>([]);
 const currentMood = ref();
+const showToast = ref(false);
 
 function calcMood(arr: any) {
   if (arr.length === 0) return 0; // zabezpieczenie przed dzieleniem przez 0
@@ -73,8 +85,6 @@ watchEffect(() => {
     currentMood.value = calcMood(allMoods.value);
   }
 });
-
-// props.emotes.find((e) => e.count === props.curentMood)?.emote
 </script>
 
 <style></style>

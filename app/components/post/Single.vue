@@ -137,16 +137,10 @@ const props = defineProps({
 });
 const showComments = ref(false);
 const emits = defineEmits(["like", "heart", "peace"]);
-
 const showReportButton = ref(false);
 
-const {
-  getCommentsCount,
-  getComments,
-  commentCount,
-  comments,
-  newComment,
-} = usePostComment();
+const { getCommentsCount, getComments, commentCount, comments, newComment } =
+  usePostComment();
 
 const typedComments = comments as Ref<CommentInterface[]>;
 
