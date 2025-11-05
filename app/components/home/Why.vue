@@ -3,7 +3,7 @@
     <div class="flex flex-col items-center lg:flex-row lg:justify-between">
       <div>
         <HomeHeader text="Dlaczego warto?" />
-        <p v-for="b in base" :key="b" class="text-xl my-4">{{ b }}</p>
+        <p v-for="b in base" :key="b" class="text-gray-300 text-xl my-4">{{ b }}</p>
       </div>
       <IconsWhy class="max-w-md w-full" />
     </div>
@@ -14,7 +14,7 @@
       >
         <div>
           <HomeHeader text="Odkryj moc artykułów" />
-          <p class="max-w-xl lg:mt-4 lg:text-lg xl:text-xl">
+          <p class="text-gray-300 max-w-xl lg:mt-4 lg:text-lg xl:text-xl">
             Już teraz nawet bez zakładania konta możesz przeczytać artykuły,
             które mogą Ci pomóc w budowaniu nowej, lepszej wersji Ciebie.
           </p>

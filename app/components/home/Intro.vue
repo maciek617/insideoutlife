@@ -1,11 +1,11 @@
 <template>
   <div class="pt-20 lg:pt-28 xl:pt-32 2xl:pt-40">
-    <h1 class="text-4xl text-center lg:text-5xl xl:text-6xl">
+    <h1 class="font-bold text-4xl text-center lg:text-5xl xl:text-6xl">
       Nie jesteś sam. <span class="text-[#ff512f]">Inside</span
       ><span class="text-[#f09819]">Out</span>.
     </h1>
     <p
-      class="text-center text-md mt-2 max-w-lg mx-auto lg:text-lg xl:text-xl xl:mt-4"
+      class="text-gray-300 text-center text-md mt-2 max-w-lg mx-auto lg:text-lg xl:text-xl xl:mt-4"
     >
       Aplikacja wspierająca mężczyzn po zdradzie. Anonimowo, bez oceniania, z
       realnym wsparciem.

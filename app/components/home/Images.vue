@@ -1,7 +1,7 @@
 <template>
   <div class="mt-20">
     <HomeHeader text="Poznaj aplikację!" />
-    <p class="mt-4 lg:text-lg xl:text-xl">
+    <p class="text-gray-300 mt-4 lg:text-lg xl:text-xl">
       Sprawdź jak wygląda wnętrze aplikacji, by nic Cię nie zaskoczyło po
       zalogowaniu
     </p>
