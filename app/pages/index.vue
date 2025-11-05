@@ -10,6 +10,7 @@
 
     <HomeEnd class="lg:mt-44" />
     <HomeFaq class="lg:mt-24" />
+    <HomeNewsletter class="lg:mt-24"/>
     <HomeMotivate />
   </div>
 </template>

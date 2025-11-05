@@ -19,7 +19,7 @@
           type="success"
         />
       </div>
-      
+
       <div v-if="entry">
         <IconsDone />
         <p class="text-center text-white text-xl lg:text-2xl xl:text-3xl">
