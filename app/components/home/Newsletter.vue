@@ -17,7 +17,7 @@
 
     <div class="flex items-center justify-center mt-10">
       <div
-        class="border py-2 px-4 rounded-full flex items-center gap-10 md:px-6 lg:px-10"
+        class="border py-2 px-4 rounded-3xl flex items-center gap-2 md:gap-10 md:px-6 lg:px-10 xl:gap-14"
       >
         <div class="flex flex-col">
           <label>Adres e-mail</label>
@@ -68,7 +68,7 @@ const handleSubmit = async () => {
 
   if (!emailError.value) {
     await checkIfEmailExists(email.value);
-    
+
     if (!emailExists.value) {
       // update bazy danych
       await addEmailToNewsletterBase(email.value);

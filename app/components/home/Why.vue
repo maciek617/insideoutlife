@@ -30,9 +30,9 @@
 
 <script lang="ts" setup>
 const base = ref([
-  "✅ Anonimowość i bezpieczeństwo",
-  "✅ Prawdziwe wsparcie od osób w podobnej sytuacji",
-  "✅ Narzędzia, które pomogą Ci odbudować siebie",
+  "🗸 Anonimowość i bezpieczeństwo",
+  "🗸 Prawdziwe wsparcie od osób w podobnej sytuacji",
+  "🗸 Narzędzia, które pomogą Ci odbudować siebie",
 ]);
 </script>
 

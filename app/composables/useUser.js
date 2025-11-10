@@ -25,7 +25,6 @@ export function useUser() {
       .select("*", { count: "exact", head: true })
       .eq("user_id", userData.value.id);
 
-    console.log(error);
 
     if (!error && count) {
       userPostsCount.value = count;
@@ -38,7 +37,6 @@ export function useUser() {
       .select("*", { count: "exact", head: true })
       .eq("user_id", userData.value.id);
 
-    console.log(error);
 
     if (!error && count) {
       userCommentsCount.value = count;

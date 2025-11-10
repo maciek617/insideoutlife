@@ -4,13 +4,12 @@
     <HomeIntro />
     <HomeHero />
     <HomeWhy />
-    <HomeQuote class="lg:mt-32 xl:mt-44" />
-
+    <!-- <HomeQuote class="lg:mt-32 xl:mt-44" /> -->
+    <HomeStats class="lg:mt-32" />
     <HomeImages class="lg:mt-32" />
-
     <HomeEnd class="lg:mt-44" />
     <HomeFaq class="lg:mt-24" />
-    <HomeNewsletter class="lg:mt-24"/>
+    <HomeNewsletter class="lg:mt-24" />
     <HomeMotivate />
   </div>
 </template>

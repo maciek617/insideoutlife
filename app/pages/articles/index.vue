@@ -55,7 +55,7 @@ async function getAllArticles() {
     .from("articles")
     .select("title, slug, content")
     .order("created_at", { ascending: false });
-  console.log(data);
+
   if (data && !error) {
     allArticles.value = data;
   }

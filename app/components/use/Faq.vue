@@ -7,7 +7,7 @@
       class="rounded my-2 bg-black p-5 cursor-pointer"
     >
       <button class="text-md cursor-pointer md:text-lg xl:text-xl">
-        ⬇️ {{ item.question }}
+        👇 {{ item.question }}
       </button>
       <div v-show="item.expanded" class="mt-2 italic">
         {{ item.answer }}
