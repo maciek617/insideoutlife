@@ -42,7 +42,7 @@ const sentences = ref([
     stats: "87%",
   },
   {
-    title: "Mężczyzn popełniających samob*jstwo.",
+    title: "Popełnianych samobójstw to mężczyźni.",
     stats: "86%",
   },
   {
