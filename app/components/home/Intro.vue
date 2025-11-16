@@ -1,5 +1,5 @@
 <template>
-  <div class="pt-20 lg:pt-28 xl:pt-32 2xl:pt-40">
+  <div class="pt-20 lg:pt-28 xl:pt-40 2xl:pt-52">
     <h1 class="font-bold text-4xl text-center lg:text-5xl xl:text-6xl">
       Nie jesteś sam. <span class="text-[#ff512f]">Inside</span
       ><span class="text-[#f09819]">Out</span>.

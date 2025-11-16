@@ -81,6 +81,7 @@
       </div>
     </div>
     <use-spinner v-else />
+    <HomeScrollUp/>
   </div>
 </template>
 

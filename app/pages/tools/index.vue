@@ -6,7 +6,7 @@
     <ToolsHero />
     <ToolsSearch @searching="(e) => filterApps(e)" />
 
-    <div class="flex gap-4 flex-wrap mt-10 justify-center">
+    <div class="flex gap-4 flex-wrap mt-10 justify-center lg:mt-20 xl:mt-28">
       <ToolsCard
         v-for="appInfo in filteredAppInfoBase"
         :key="appInfo.title"
@@ -42,7 +42,7 @@ const appInfoBase = ref([
   },
   {
     title: "Headsupguys.org",
-    desc: "Artykuły, walka z depresją",
+    desc: "Artykuły, walka z depresją, język angielski",
     link: "https://headsupguys.org/",
     isVerfied: true,
   },
@@ -54,7 +54,7 @@ const appInfoBase = ref([
   },
   {
     title: "Face It",
-    desc: "Walka z depresją, artykuły, eventy",
+    desc: "Walka z depresją, artykuły, eventy, język angielski",
     link: "https://www.faceitfoundation.org/",
     isVerfied: true,
   },

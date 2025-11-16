@@ -3,7 +3,18 @@
     <div class="flex flex-col items-center lg:flex-row lg:justify-between">
       <div>
         <HomeHeader text="Dlaczego warto?" />
-        <p v-for="b in base" :key="b" class="text-gray-300 text-xl my-4">{{ b }}</p>
+        <div
+          v-for="b in base"
+          :key="b"
+          class="text-gray-300 text-xl my-4 flex items-center gap-4"
+        >
+          <div
+            class="bg-[#121212] flex items-center justify-center w-8 h-8 rounded shadow-xl"
+          >
+            <p>✔️</p>
+          </div>
+          <p>{{ b }}</p>
+        </div>
       </div>
       <IconsWhy class="max-w-md w-full" />
     </div>
@@ -30,9 +41,9 @@
 
 <script lang="ts" setup>
 const base = ref([
-  "🗸 Anonimowość i bezpieczeństwo",
-  "🗸 Prawdziwe wsparcie od osób w podobnej sytuacji",
-  "🗸 Narzędzia, które pomogą Ci odbudować siebie",
+  "Anonimowość i bezpieczeństwo",
+  "Prawdziwe wsparcie od osób w podobnej sytuacji",
+  "Narzędzia, które pomogą Ci odbudować siebie",
 ]);
 </script>
 

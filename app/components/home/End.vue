@@ -8,10 +8,11 @@
           wierność ponad wszystko. Nie uznaję zdrad. Związek to nie jest miejsce
           na skoki w bok. Dlatego chcę pomóc każdemu chłopakowi, który ma
           podobny "mindset" do mnie, mimo że ja nie doświadczyłem zdrady,
-          ponieważ jestem w swoim pierwszym i jedynym, kilkuletnim szczęśliwym związku. To
-          obserwuje otoczenie i wiem jak cierpicie chłopaki. Tak, Ty jesteś ważny
-          dla wielu ludzi! Nie poddawaj się! Jestem tu wraz z innymi, którzy
-          chcą Ci pomóc! #ProszenieOPomocJestMeskie
+          ponieważ jestem w swoim pierwszym i jedynym, kilkuletnim szczęśliwym
+          związku. To obserwuje otoczenie i wiem jak cierpicie chłopaki. Tak, Ty
+          jesteś ważny dla wielu ludzi! Nie poddawaj się! Jestem tu wraz z
+          innymi, którzy chcą Ci pomóc!
+          <span class="text-[#f09819]">#ProszenieOPomocJestMeskie</span>
         </p>
       </div>
       <IconsEnd />
