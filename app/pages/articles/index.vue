@@ -13,17 +13,27 @@
       Czytaj. Inspiruj się. Działaj.
     </h1>
 
-    <div
-      v-if="allArticles.length"
-      class="flex gap-8 flex-wrap mt-10 justify-center"
-    >
-      <ArticleSingle
-        v-for="article in allArticles"
-        :key="article?.title"
-        :title="article.title"
-        :desc="article?.content[0]?.data"
-        :img="article.content.find((item) => item.type === 'image')?.src"
-        :slug="article.slug"
+    <div v-if="allArticles.length">
+      <div
+        class="grid grid-cols-1 place-items-center-safe gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-10"
+      >
+        <ArticleSingle
+          v-for="article in allArticles"
+          :key="article?.title"
+          :title="article.title"
+          :desc="article?.content[0]?.data"
+          :img="article.content.find((item) => item.type === 'image')?.src"
+          :slug="article.slug"
+        />
+      </div>
+
+      <p class="text-center mt-5" v-if="noMoreArticlesMsg">
+        Nie ma już więcej artykułów, wróć w przyszłości!
+      </p>
+      <UseButton
+        text="Załaduj więcej"
+        class="mx-auto block mt-10"
+        @click="loadMoreArticles"
       />
     </div>
     <use-spinner v-else class="mx-auto block mt-10" />
@@ -33,33 +43,12 @@
 <script lang="ts" setup>
 const user = useSupabaseUser();
 
-interface Content {
-  data: string;
-  type: string;
-  alt?: string;
-  src?: string;
-}
-interface Articles {
-  title: string;
-  slug: string;
-  content: Content[];
-}
+const { getAllArticles, allArticles, loadMoreArticles, noMoreArticlesMsg } =
+  useArticles();
 
-const supabase = useSupabaseClient();
-const allArticles = ref<Articles[]>([]);
-
-onMounted(getAllArticles);
-
-async function getAllArticles() {
-  const { data, error } = await supabase
-    .from("articles")
-    .select("title, slug, content")
-    .order("created_at", { ascending: false });
-
-  if (data && !error) {
-    allArticles.value = data;
-  }
-}
+onMounted(async () => {
+  await getAllArticles();
+});
 </script>
 
 <style></style>

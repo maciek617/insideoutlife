@@ -1,6 +1,6 @@
 <template>
   <div
-    class="text-white max-w-xs w-full bg-[#212121] p-2 rounded shadow-xl pb-4"
+    class="text-white max-w-xs h-full w-full bg-[#212121] p-2 rounded shadow-xl pb-4"
   >
     <NuxtImg
       :src="props.img"
@@ -19,7 +19,7 @@
       }}
     </p>
 
-    <NuxtLink :to="'./articles/' + props.slug">
+    <NuxtLink :to="`/articles/${props.slug}`">
       <UseButton text="Czytaj" class="mt-4" />
     </NuxtLink>
   </div>
