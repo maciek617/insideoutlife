@@ -31,6 +31,7 @@
         Nie ma już więcej artykułów, wróć w przyszłości!
       </p>
       <UseButton
+        v-if="!noMoreArticlesMsg"
         text="Załaduj więcej"
         class="mx-auto block mt-10"
         @click="loadMoreArticles"

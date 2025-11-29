@@ -5,7 +5,7 @@
         v-model="serachTerm"
         type="text"
         placeholder="Znajdź coś dla siebie"
-        class="border-b border-[#414141] p-2 rounded-lg bg-[#212121] outline-0 focus:border-[#999999]"
+        class="border-b border-[#414141] p-2 rounded-lg bg-[#212121] outline-0 focus:border-[#999999] lg:w-md"
         @keyup="
           () => {
             if (serachTerm) return;

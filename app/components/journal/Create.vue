@@ -1,13 +1,19 @@
 <template>
   <div class="text-white">
-    <p class="text-2xl lg:text-3xl xl:text-4xl">Jak się dziś czujesz?</p>
-    <div class="flex gap-4 text-2xl">
+    <p class="font-bold text-3xl lg:text-4xl xl:text-5xl">
+      Jak się dziś czujesz?
+    </p>
+    <div class="flex gap-4 text-2xl mt-1">
       <p
         v-for="emote in props.emotes"
         :key="emote.count"
         @click="mood = emote.count"
-        class="p-2 rounded cursor-pointer mt-2"
-        :class="mood === emote.count ? 'border-orange-400 border' : ''"
+        class="p-2 rounded cursor-pointer mt-2 border hover:border-orange-400"
+        :class="
+          mood === emote.count
+            ? 'border-orange-400 border'
+            : 'border-transparent'
+        "
       >
         {{ emote.emote }}
       </p>
@@ -47,7 +53,7 @@ async function handleCreateJournalEntry() {
   if (content.value.length > 100) return;
   await createJournalEntry(content.value.trimEnd(), mood.value);
   content.value = "";
-  emits('showToast')
+  emits("showToast");
 }
 </script>
 

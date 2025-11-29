@@ -1,6 +1,6 @@
 <template>
   <div class="text-center mt-20">
-    <div class="max-w-5xl mx-auto">
+    <div class="max-w-[950px] mx-auto">
       <p class="text-4xl font-bold lg:text-5xl xl:text-6xl 2xl:text-7xl">
         Masz <span class="text-[#f09819]">pytanie?</span> a może
         <span class="text-[#f09819]">plan?</span> wpadnij do InsideOutLife.

@@ -2,10 +2,12 @@
   <div class="min-h-[100vh] p-4 pt-20 lg:flex">
     <UseNav class="flex-1" />
 
-    <div class="flex-1 text-white lg:ml-24 xl:ml-52">
-      <h1 class="text-2xl lg:text-3xl xl:text-4xl">
-        Cześć, mam nadzieję, że jest trochę lepiej!
+    <div v-if="userData" class="flex-1 text-white lg:ml-24 xl:ml-52">
+      <h1 class="font-bold text-4xl lg:text-5xl xl:text-6xl">
+        Cześć, {{ userData?.nick }}!
       </h1>
+
+      <DashboardQuote />
 
       <div
         class="mt-10 flex flex-wrap gap-5 justify-center lg:justify-start"
@@ -54,6 +56,8 @@
 definePageMeta({
   middleware: "auth",
 });
+
+const { userData } = useUser();
 
 const supabase = useSupabaseClient();
 const latestArticle = ref();

@@ -1,6 +1,6 @@
 <template>
   <div class="text-white mt-20">
-    <p class="text-xl">Oto twoja historia z ostatnich 30 dni:</p>
+    <p class="text-xl lg:text-2xl">Oto twoja historia z ostatnich <span class="font-bold">30 dni</span>:</p>
 
     <div
       class="flex flex-wrap gap-5 mt-4 justify-center md:justify-start"

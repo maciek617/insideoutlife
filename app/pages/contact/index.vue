@@ -4,7 +4,7 @@
       <UseButton text="Powrót" class="mt-4" />
     </NuxtLink>
     <ContactHero />
-    <ContactForm/>
+    <ContactForm />
   </div>
 </template>
 

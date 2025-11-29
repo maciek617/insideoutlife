@@ -22,13 +22,14 @@
 
       <div v-if="entry">
         <IconsDone />
-        <p class="text-center text-white text-xl lg:text-2xl xl:text-3xl">
-          Gratulacje!! Dziś już zapisałeś swoje uczucia. Wróć koniecznie jutro!
+        <p class="text-center text-white text-xl font-thin max-w-lg mx-auto lg:text-2xl xl:text-3xl">
+          Gratulacje! Dziś już zapisałeś swoje uczucia. Wróć koniecznie jutro!
         </p>
       </div>
 
       <JournalStats :emote="currentMood" />
       <JournalHistory :items="allEmotes" :emotes="emotes" />
+      <!-- TODO: Wykres pokazujący zestawienie emocji w formie lini -->
     </div>
     <UseSpinner v-else class="mx-auto block" />
   </div>

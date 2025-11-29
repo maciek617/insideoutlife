@@ -1,5 +1,5 @@
 <template>
-  <div v-if="props.headings?.length">
+  <div v-if="props.headings?.length" class="mt-5">
     <p class="text-xl">Spis treści</p>
     <p
       v-for="heading in props.headings"

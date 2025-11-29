@@ -1,9 +1,9 @@
 <template>
   <div class="bg-[#212121] rounded-xl shadow-xl max-w-xs min-w-xs p-4">
     <div>
-      <p class="text-xl">{{ props.title }}</p>
+      <p class="text-xl font-bold">{{ props.title }}</p>
       <p class="italic text-center pt-2">{{ props.text }}</p>
-      <p class="italic text-center text-sm" v-if="props.date">
+      <p class="font-bold text-center text-sm text-gray-400" v-if="props.date">
         {{ props.date }}
       </p>
       <NuxtLink :to="props.link" target="_blank">
