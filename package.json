@@ -18,6 +18,8 @@
     "@nuxtjs/sitemap": "^7.4.7",
     "@supabase/supabase-js": "^2.57.4",
     "@tailwindcss/vite": "^4.1.13",
+    "jspdf": "^3.0.4",
+    "jspdf-autotable": "^5.0.2",
     "marked": "^16.3.0",
     "nuxt": "^4.1.2",
     "tailwindcss": "^4.1.13",

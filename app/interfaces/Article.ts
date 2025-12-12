@@ -10,3 +10,10 @@ export interface Articles {
   slug: string;
   content: Content[];
 }
+
+export interface ArticleLikes {
+  id: string;
+  article_id: string;
+  user_id: string;
+  created_at: string;
+}

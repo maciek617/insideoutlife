@@ -3,7 +3,6 @@ const allArticles = ref<Articles[]>([]);
 
 export const useArticles = () => {
   const supabase = useSupabaseClient();
-  // const allArticles = ref<Articles[]>([]);
   const range = ref(3);
   const noMoreArticlesMsg = ref(false);
 
