@@ -8,7 +8,7 @@
     </h1>
     <div class="flex gap-5 flex-wrap mt-5">
       <div
-        v-for="update in updates"
+        v-for="update in store.updates"
         :key="update.title"
         class="bg-[#111] max-w-xs w-full p-4 rounded shadow-xl"
       >
@@ -27,21 +27,11 @@ definePageMeta({
   middleware: "auth",
 });
 
-import { type Update } from "~/interfaces/Update";
-const supabase = useSupabaseClient();
-const updates = ref<Array<Update>>();
+const store = useUpdatesStore();
 
-const fetchAllUpdates = async () => {
-  const { data, error } = await supabase
-    .from("updates")
-    .select()
-    .order("created_at", { ascending: false });
-
-  if (data && !error) {
-    updates.value = data;
-  }
-};
-onMounted(fetchAllUpdates);
+onMounted(async () => {
+  callOnce("getUpdates", () => store.fetchAllUpdates());
+});
 </script>
 
 <style></style>

@@ -1,7 +1,7 @@
 <template>
-  <div v-if="props.tags" class="flex gap-2 flex-wrap">
+  <div v-if="store.article?.tags" class="flex gap-2 flex-wrap">
     <div
-      v-for="(tag, idx) in props.tags"
+      v-for="(tag, idx) in store.article.tags"
       :key="idx"
       class="bg-[#171717] w-fit p-1.5 rounded shadow text-[9px] uppercase tracking-wider font-bold md:text-[10px]"
     >
@@ -11,9 +11,7 @@
 </template>
 
 <script lang="ts" setup>
-const props = defineProps<{
-  tags: Array<String>;
-}>();
+const store = useArticleStore();
 </script>
 
 <style></style>

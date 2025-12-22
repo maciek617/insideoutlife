@@ -19,7 +19,7 @@
         </div>
         <textarea
           v-model="postContent"
-          class="w-full border rounded p-2 mt-2 border-none outline-none"
+          class="w-full border rounded p-2 mt-2 border-none outline-none max-h-96"
           placeholder="Wyrzuć z siebie emocje..."
         ></textarea>
       </div>

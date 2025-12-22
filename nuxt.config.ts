@@ -13,6 +13,7 @@ export default defineNuxtConfig({
     "@nuxtjs/supabase",
     "@nuxtjs/seo",
     "@nuxtjs/sitemap",
+    "@pinia/nuxt",
   ],
   supabase: {
     redirect: false,

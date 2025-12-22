@@ -1,19 +1,19 @@
 <template>
-  <div class="-mt-5" v-if="articleLikes !== null">
+  <div class="-mt-5" v-if="store.articleLikes !== null">
     <div
       class="flex gap-2 flex-wrap items-center"
-      :class="isNightTime ? 'blue-filter' : ''"
+      :class="store.isNightTime ? 'blue-filter' : ''"
     >
       <div
         class="bg-[#222] w-fit p-2 cursor-pointer group rounded"
-        @click="handleArticleLike()"
+        @click="store.toggleArticleLike()"
       >
         <IconsLike
           class="w-4.5 h-4.5 transition-colors group-hover:fill-orange-400"
-          :class="articleLiked ? 'fill-orange-400' : 'fill-white'"
+          :class="store.likeArticleExists ? 'fill-orange-400' : 'fill-white'"
         />
       </div>
-      <p>{{ articleLikes }}</p>
+      <p>{{ store.articleLikes }}</p>
       <div
         class="bg-[#222] w-fit p-2 cursor-pointer group rounded ml-3"
         @click="copyLink"
@@ -32,11 +32,11 @@
       </div>
       <div
         class="bg-[#222] w-fit p-2 cursor-pointer group rounded ml-2"
-        @click="handleChangeNightTime()"
+        @click="store.isNightTime = !store.isNightTime"
       >
         <IconsMoon
           class="w-4.5 h-4.5 transition-colors group-hover:fill-orange-400"
-          :class="isNightTime ? 'fill-orange-400' : 'fill-white'"
+          :class="store.isNightTime ? 'fill-orange-400' : 'fill-white'"
         />
       </div>
     </div>
@@ -47,7 +47,7 @@
       :type="'success'"
     />
     <UseToast
-      v-if="errorToast"
+      v-if="store.errorToast"
       :title="'Coś poszło nie tak...'"
       :desc="'Musisz być zalogowany by ocenić ten artykuł'"
       :type="'error'"
@@ -58,32 +58,9 @@
 
 <script lang="ts" setup>
 import { generatePdf } from "~/helpers/generateArticlePdf";
-import { useArticleLike } from "#imports";
-const {
-  toggleArticleLike,
-  countCurrentArticleLikes,
-  checkIfArticlesWasLiked,
-  user,
-} = useArticleLike();
-
+const store = useArticleStore();
 const url = useRequestURL();
 const success = ref(false);
-const articleLikes = ref<null | number>(null);
-const articleLiked = ref<boolean>();
-
-const props = defineProps({
-  content: Array<any>,
-  title: String,
-  id: String,
-});
-
-const isNightTime = ref(false);
-const emits = defineEmits(["night-time"]);
-
-const handleChangeNightTime = () => {
-  isNightTime.value = !isNightTime.value;
-  emits("night-time", isNightTime.value);
-};
 
 const copyLink = async () => {
   success.value = false;
@@ -95,40 +72,20 @@ const copyLink = async () => {
   }
 };
 
-const blocks = ref(props.content);
+const blocks = ref(store.article?.content);
 
-const downloadPdf = () => generatePdf(blocks.value, props.title);
-
-const errorToast = ref(false);
-const handleArticleLike = async () => {
-  if (!user.value) {
-    errorToast.value = true;
-    return;
-  }
-  errorToast.value = false;
-  articleLiked.value = await toggleArticleLike(props.id || "");
-  articleLikes.value !== null
-    ? (articleLikes.value += articleLiked.value ? 1 : -1)
-    : null;
-};
+const downloadPdf = () => generatePdf(blocks.value, store.article?.title);
 
 const closeToast = () => {
   setTimeout(() => {
-    errorToast.value = false;
+    store.errorToast = false;
   }, 500);
 };
 
 onMounted(async () => {
-  if (user.value) {
-    const { existing } = await checkIfArticlesWasLiked(props.id || "");
-    articleLiked.value = existing ? true : false;
+  if (store.user) {
+    await store.checkIfArticlesWasLiked();
   }
-  articleLikes.value = await countCurrentArticleLikes(props.id || "");
+  await store.countCurrentArticleLikes();
 });
 </script>
-
-<style>
-.no-filter {
-  filter: none;
-}
-</style>

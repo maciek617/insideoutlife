@@ -1,11 +1,10 @@
 <template>
-  <div class="text-white mt-20">
-    <p class="text-xl lg:text-2xl">Oto twoja historia z ostatnich <span class="font-bold">30 dni</span>:</p>
+  <div class="text-white mt-20" v-if="props.items.length > 0">
+    <p class="text-xl lg:text-2xl">
+      Oto twoja historia <span class="font-bold">30</span> ostatnich wpisów
+    </p>
 
-    <div
-      class="flex flex-wrap gap-5 mt-4 justify-center md:justify-start"
-      v-if="props.items.length > 0"
-    >
+    <div class="flex flex-wrap gap-5 mt-4 justify-center md:justify-start">
       <JournalMood
         v-for="mood in props.items"
         :key="mood.id"
@@ -14,11 +13,6 @@
         :emote="mood.mood"
         :emotes="props.emotes"
       />
-    </div>
-    <div v-else>
-      <p class="text-2xl">
-        Aby śledzić twoje statystyki zacznij dodawać wpisy każdego dnia!
-      </p>
     </div>
   </div>
 </template>

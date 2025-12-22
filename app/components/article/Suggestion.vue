@@ -18,18 +18,18 @@
 
 <script lang="ts" setup>
 import type { Articles } from "~/interfaces/Article";
-const props = defineProps({ id: String });
-const { allArticles, getAllArticles } = useArticles();
+const store = useArticleStore();
+
 const tempArticles = ref<Articles[]>(
-  allArticles.value.filter((item) => item.id !== props.id).splice(0, 2)
+  store.allArticles.filter((item) => item.id !== store.article?.id).splice(0, 2)
 );
 
 onMounted(async () => {
-  if (!allArticles.value.length) {
-    await getAllArticles();
+  if (!store.allArticles.length) {
+    await store.fetchAllArticles();
 
-    tempArticles.value = allArticles.value
-      .filter((item) => item.id !== props.id)
+    tempArticles.value = store.allArticles
+      .filter((item) => item.id !== store.article?.id)
       .splice(0, 2);
   }
 });

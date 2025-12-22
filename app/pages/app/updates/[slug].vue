@@ -4,14 +4,14 @@
       <UseButton text="Powrót" />
     </NuxtLink>
 
-    <div v-if="updates?.title">
-      <p class="mt-3">{{ updates.title }}</p>
-      <p>{{ updates.date }}</p>
+    <div v-if="store.update?.title && !store.loading">
+      <p class="mt-3">{{ store.update.title }}</p>
+      <p>{{ store.update.date }}</p>
       <div class="mt-5">
         <p class="text-2xl font-bold lg:text-3xl xl:text-4xl 2xl:text-5xl">
           Nowości:
         </p>
-        <p v-for="update in updates?.new_features" class="mt-1 lg:text-lg">
+        <p v-for="update in store.update?.new_features" class="mt-1 lg:text-lg">
           ◦ {{ update }}
         </p>
       </div>
@@ -19,7 +19,7 @@
         <p class="mt-5 text-2xl font-bold lg:text-3xl xl:text-4xl 2xl:text-5xl">
           Zmiany i ulepszenia:
         </p>
-        <p v-for="update in updates?.changes" class="mt-1 lg:text-lg">
+        <p v-for="update in store.update?.changes" class="mt-1 lg:text-lg">
           ◦ {{ update }}
         </p>
       </div>
@@ -27,7 +27,7 @@
         <p class="mt-5 text-2xl font-bold lg:text-3xl xl:text-4xl 2xl:text-5xl">
           Naprawa błędów:
         </p>
-        <p v-for="update in updates?.bug_fixes" class="mt-1 lg:text-lg">
+        <p v-for="update in store.update?.bug_fixes" class="mt-1 lg:text-lg">
           ◦ {{ update }}
         </p>
       </div>
@@ -37,34 +37,12 @@
 </template>
 
 <script lang="ts" setup>
-import { type Update } from "~/interfaces/Update";
-const supabase = useSupabaseClient();
+const store = useUpdatesStore();
 const route = useRoute();
-const titleSlug = ref(route.params.slug);
-const updates = ref<Update>();
-
-const changeSlugTitle = () => {
-  if (titleSlug) {
-    titleSlug.value = titleSlug.value?.toString().replaceAll(/-/g, " ");
-  }
-};
-
-const fetchUpdate = async () => {
-  if (!titleSlug.value) return;
-  changeSlugTitle();
-  const { data, error } = await supabase
-    .from("updates")
-    .select()
-    .eq("title", titleSlug.value)
-    .single();
-
-  if (data && !error) {
-    updates.value = data;
-  }
-};
+const slug = ref(route.params.slug?.toString());
 
 onMounted(async () => {
-  await fetchUpdate();
+  await store.fetchSingleUpdate(slug.value || "");
 });
 </script>
 

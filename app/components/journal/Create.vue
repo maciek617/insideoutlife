@@ -1,5 +1,5 @@
 <template>
-  <div class="text-white">
+  <div class="text-white mt-2">
     <p class="font-bold text-3xl lg:text-4xl xl:text-5xl">
       Jak się dziś czujesz?
     </p>
@@ -20,12 +20,28 @@
     </div>
 
     <div class="mt-10 max-w-xl">
-      <p class="lg:text-lg">Możesz opisać swoje uczucia na dzisiejszy dzień</p>
+      <div class="flex items-center justify-between">
+        <p class="lg:text-lg">Opisz swoje dzisiejsze uczucia</p>
+
+        <IconsTrash
+          class="w-5 h-5 fill-[#414141] cursor-pointer hover:fill-orange-400"
+          @click="content = ''"
+        />
+      </div>
       <textarea
         v-model="content"
         placeholder="Pamiętaj możesz napisać wszystko..."
-        class="w-full p-2 border-b border-gray-500"
+        class="mt-1 w-full p-2 border-b border-gray-500 max-h-96"
       ></textarea>
+      <p
+        class="text-gray-400 text-right"
+        :class="content.length >= 100 ? 'text-red-400' : 'text-gray-400'"
+      >
+        {{ content.length }}/100
+      </p>
+      <p v-if="error || content.length >= 100" class="text-red-400">
+        Możesz użyć maksymalnie 100 znaków
+      </p>
     </div>
     <UseButton text="Zapisz" @click="handleCreateJournalEntry" class="mt-4" />
   </div>
@@ -33,7 +49,8 @@
 
 <script lang="ts" setup>
 const { createJournalEntry } = useJournal();
-
+const stats = useStatsStore();
+const error = ref(false);
 type Emote = {
   emote: string;
   count: number;
@@ -49,10 +66,16 @@ const content = ref("");
 const mood = ref();
 
 async function handleCreateJournalEntry() {
+  error.value = false;
   if (!mood.value) return;
-  if (content.value.length > 100) return;
+  if (content.value.length > 100) {
+    error.value = true;
+    return;
+  }
   await createJournalEntry(content.value.trimEnd(), mood.value);
   content.value = "";
+  await stats.getAllEntries();
+  await stats.getAllEntriesWithText();
   emits("showToast");
 }
 </script>

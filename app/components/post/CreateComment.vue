@@ -3,7 +3,7 @@
     <textarea
       v-model="content"
       placeholder="Wesprzyj słowem..."
-      class="w-full mt-4 p-2"
+      class="w-full mt-4 p-2 max-h-96"
     ></textarea>
     <UseButton text="Dodaj" @click="handlePostComment()" />
   </div>

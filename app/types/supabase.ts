@@ -14,6 +14,35 @@ export type Database = {
   }
   public: {
     Tables: {
+      article_likes: {
+        Row: {
+          article_id: string | null
+          created_at: string | null
+          id: string
+          user_id: string | null
+        }
+        Insert: {
+          article_id?: string | null
+          created_at?: string | null
+          id?: string
+          user_id?: string | null
+        }
+        Update: {
+          article_id?: string | null
+          created_at?: string | null
+          id?: string
+          user_id?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "article_likes_article_id_fkey"
+            columns: ["article_id"]
+            isOneToOne: false
+            referencedRelation: "articles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       articles: {
         Row: {
           author_id: string | null
@@ -21,7 +50,9 @@ export type Database = {
           created_at: string | null
           id: string
           published: boolean | null
+          read_time: string | null
           slug: string
+          tags: string[] | null
           title: string
           updated_at: string | null
         }
@@ -31,7 +62,9 @@ export type Database = {
           created_at?: string | null
           id?: string
           published?: boolean | null
+          read_time?: string | null
           slug: string
+          tags?: string[] | null
           title: string
           updated_at?: string | null
         }
@@ -41,7 +74,9 @@ export type Database = {
           created_at?: string | null
           id?: string
           published?: boolean | null
+          read_time?: string | null
           slug?: string
+          tags?: string[] | null
           title?: string
           updated_at?: string | null
         }
@@ -372,6 +407,36 @@ export type Database = {
           },
         ]
       }
+      updates: {
+        Row: {
+          bug_fixes: string[] | null
+          changes: string[] | null
+          created_at: string
+          date: string | null
+          id: number
+          new_features: string[] | null
+          title: string | null
+        }
+        Insert: {
+          bug_fixes?: string[] | null
+          changes?: string[] | null
+          created_at?: string
+          date?: string | null
+          id?: number
+          new_features?: string[] | null
+          title?: string | null
+        }
+        Update: {
+          bug_fixes?: string[] | null
+          changes?: string[] | null
+          created_at?: string
+          date?: string | null
+          id?: number
+          new_features?: string[] | null
+          title?: string | null
+        }
+        Relationships: []
+      }
       users: {
         Row: {
           avatar: string | null
@@ -398,7 +463,13 @@ export type Database = {
       }
     }
     Views: {
-      [_ in never]: never
+      most_common_mood: {
+        Row: {
+          count: number | null
+          mood: number | null
+        }
+        Relationships: []
+      }
     }
     Functions: {
       [_ in never]: never

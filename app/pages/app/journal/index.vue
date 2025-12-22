@@ -22,14 +22,16 @@
 
       <div v-if="entry">
         <IconsDone />
-        <p class="text-center text-white text-xl font-thin max-w-lg mx-auto lg:text-2xl xl:text-3xl">
+        <p
+          class="text-center text-white text-xl font-thin max-w-lg mx-auto lg:text-2xl xl:text-3xl"
+        >
           Gratulacje! Dziś już zapisałeś swoje uczucia. Wróć koniecznie jutro!
         </p>
       </div>
-
       <JournalStats :emote="currentMood" />
       <JournalHistory :items="allEmotes" :emotes="emotes" />
-      <!-- TODO: Wykres pokazujący zestawienie emocji w formie lini -->
+      <JournalLabels />
+      <JournalChart :items="allEmotes" :emotes="emotes" />
     </div>
     <UseSpinner v-else class="mx-auto block" />
   </div>
@@ -39,6 +41,7 @@
 definePageMeta({
   middleware: "auth",
 });
+const stats = useStatsStore();
 const {
   getAllEmotes,
   checkIfJournalIsCreatedForToday,
@@ -48,11 +51,11 @@ const {
 } = useJournal();
 
 const emotes = ref([
-  { emote: "😞", count: 2 },
-  { emote: "😕", count: 4 },
-  { emote: "😐", count: 6 },
-  { emote: "🙂", count: 8 },
   { emote: "😄", count: 10 },
+  { emote: "🙂", count: 8 },
+  { emote: "😐", count: 6 },
+  { emote: "😕", count: 4 },
+  { emote: "😞", count: 2 },
 ]);
 
 const allMoods = ref<any>([]);
@@ -73,6 +76,10 @@ function calcMood(arr: any) {
 onMounted(async () => {
   await checkIfJournalIsCreatedForToday();
   await getAllEmotes();
+  await stats.getAllEntries();
+  await stats.getAllEntriesWithText();
+  await stats.getFirstJournalEntry();
+  await stats.getMostFrequentMood();
 
   // Wszystkie moody z dni
   allMoods.value = allEmotes.value.map((item: any) => item.mood);

@@ -5,7 +5,7 @@
         <UseButton text="Strona główna" />
       </NuxtLink>
 
-      <NuxtLink to="/app/dashboard" v-if="user?.id">
+      <NuxtLink to="/app/dashboard" v-if="store.user?.id">
         <UseButton text="Aplikacja" />
       </NuxtLink>
     </div>
@@ -13,12 +13,12 @@
       Czytaj. Inspiruj się. Działaj.
     </h1>
 
-    <div v-if="allArticles.length">
+    <div v-if="store.allArticles.length">
       <div
         class="grid grid-cols-1 place-items-center-safe gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-10"
       >
         <ArticleSingle
-          v-for="article in allArticles"
+          v-for="article in store.allArticles"
           :key="article?.title"
           :title="article.title"
           :desc="article?.content[0]?.data"
@@ -27,14 +27,14 @@
         />
       </div>
 
-      <p class="text-center mt-5" v-if="noMoreArticlesMsg">
+      <p class="text-center mt-5" v-if="store.noMoreArticlesMsg">
         Nie ma już więcej artykułów, wróć w przyszłości!
       </p>
       <UseButton
-        v-if="!noMoreArticlesMsg"
+        v-if="!store.noMoreArticlesMsg"
         text="Załaduj więcej"
         class="mx-auto block mt-10"
-        @click="loadMoreArticles"
+        @click="store.loadMoreArticles"
       />
     </div>
     <use-spinner v-else class="mx-auto block mt-10" />
@@ -42,13 +42,10 @@
 </template>
 
 <script lang="ts" setup>
-const user = useSupabaseUser();
-
-const { getAllArticles, allArticles, loadMoreArticles, noMoreArticlesMsg } =
-  useArticles();
+const store = useArticleStore();
 
 onMounted(async () => {
-  await getAllArticles();
+  await store.fetchAllArticles();
 });
 </script>
 

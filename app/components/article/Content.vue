@@ -1,6 +1,6 @@
 <template>
   <div
-    v-for="(block, i) in props.content"
+    v-for="(block, i) in store.article?.content"
     :key="i"
     class="mt-7 mb-8 max-w-3xl w-full mx-auto lg:mb-10 xl:mb-12 2xl:mb-14"
   >
@@ -46,9 +46,7 @@
 
 <script lang="ts" setup>
 import { marked } from "marked";
-const props = defineProps({
-  content: Array<any>,
-});
+const store = useArticleStore();
 
 const highlightQuotes = (text: string) => {
   return text
@@ -57,7 +55,7 @@ const highlightQuotes = (text: string) => {
 };
 
 // Funkcja konwertująca Markdown na HTML
-const renderMarkdown = (text: any) => {
+const renderMarkdown = (text: string) => {
   const highlighted = highlightQuotes(text);
   return marked(highlighted);
 };
