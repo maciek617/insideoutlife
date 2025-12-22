@@ -11,7 +11,7 @@
         class="w-6 h-6 ml-auto cursor-pointer"
         @click="store.toggleShowSummary"
       />
-      <p class="text-xl font-bold">Streszczenie artykułu</p>
+      <p class="text-sm font-bold lg:text-xl">Streszczenie artykułu</p>
       <p class="mt-2">
         {{ store.article?.summary }}
       </p>
