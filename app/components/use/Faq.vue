@@ -4,12 +4,19 @@
       v-for="(item, index) in faqs"
       :key="index"
       @click="toggleAnswer(index)"
-      class="rounded my-2 bg-black p-5 cursor-pointer"
+      class="rounded my-2 p-5 cursor-pointer"
+      :class="item.expanded ? 'bg-[#212121]' : 'bg-black'"
     >
-      <button class="text-md cursor-pointer md:text-lg xl:text-xl">
-        👇 {{ item.question }}
+      <button class="text-md cursor-pointer font-thin md:text-lg xl:text-xl">
+        <span class="text-3xl mr-3 w-5 inline-block">{{
+          item.expanded ? "-" : "+"
+        }}</span>
+        {{ item.question }}
       </button>
-      <div v-show="item.expanded" class="mt-2 italic">
+      <div
+        class="mt-2 transition-all h-0"
+        :class="item.expanded ? 'h-10 opacity-100' : 'h-0 opacity-0'"
+      >
         {{ item.answer }}
       </div>
     </div>

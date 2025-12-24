@@ -6,7 +6,7 @@
         alt="Uśmiechający się mężczyzna"
         class="w-full h-full object-cover"
       />
-      <p class="italic text-center mt-2 text-xl">
+      <p class="italic text-center font-thin mt-2 text-xl">
         "Nie pozwól by zdrada Cię złamała!"
       </p>
     </div>
@@ -15,7 +15,10 @@
         <h1 class="text-3xl">Witaj z powrotem!</h1>
         <p class="text-gray-400">
           Nie masz konta?
-          <NuxtLink to="/register" class="text-orange-200">
+          <NuxtLink
+            to="/register"
+            class="bg-clip-text text-transparent bg-gradient-to-r from-[#F14D5C] to-[#FDC70C]"
+          >
             Zarejestruj się
           </NuxtLink>
         </p>

@@ -13,6 +13,7 @@
     ></article>
 
     <!-- Cytat -->
+     
     <blockquote
       v-else-if="block.type === 'quote'"
       class="border-l-4 pl-4 italic text-gray-400 lg:text-xl lg:py-6"
@@ -21,6 +22,7 @@
     </blockquote>
 
     <!-- Heading -->
+
     <div v-if="block.type === 'heading'" :id="block.data">
       <p class="text-orange-400 text-2xl font-bold lg:text-3xl 2xl:text-4xl">
         {{ block.data }}

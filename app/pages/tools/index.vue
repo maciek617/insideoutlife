@@ -15,12 +15,18 @@
         :link="appInfo.link"
         :is-verified="appInfo.isVerfied"
       />
+
+      <p v-if="filteredAppInfoBase.length === 0">Brak wyników.</p>
     </div>
 
-    <div class="text-center mt-20">
+    <div
+      class="text-center mt-20 font-thin text-xl max-w-xl mx-auto text-gray-300"
+    >
+      <IconsBrain class="w-14 h-14 mx-auto" />
       <p>
         Jeśli znasz jakąś aplikację lub stronę internetową wsparcia a nie ma jej
-        tutaj, koniecznie się skontaktuj: kontakt@insideoutlife.pl
+        tutaj, koniecznie się skontaktuj:
+        <span class="text-[#f09819]">kontakt@insideoutlife.pl</span>
       </p>
     </div>
   </div>

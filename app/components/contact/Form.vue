@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col justify-center items-center mt-10 lg:mt-16">
-    <p class="font-bold text-2xl">Wyślij wiadomość</p>
+    <p class="font-bold text-xl uppercase tracking-wider">Wyślij wiadomość</p>
 
     <form class="max-w-lg w-full mx-auto" @submit.prevent="submitForm">
       <div class="relative mt-5">

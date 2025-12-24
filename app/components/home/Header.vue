@@ -1,5 +1,7 @@
 <template>
-  <p class="font-bold text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl">{{ props.text }}</p>
+  <p class="font-bold uppercase tracking-wider text-3xl xl:text-4xl">
+    {{ props.text }}
+  </p>
 </template>
 
 <script lang="ts" setup>

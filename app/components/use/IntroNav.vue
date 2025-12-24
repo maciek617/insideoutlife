@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="relative z-50">
     <div class="fixed top-2 right-4 z-50 lg:hidden" @click="handleShowNav">
       <IconsBars class="w-10" :class="showNav ? 'hidden' : ''" />
       <IconsXmark class="w-10" :class="showNav ? '' : 'hidden'" />

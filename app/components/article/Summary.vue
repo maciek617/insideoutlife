@@ -5,7 +5,7 @@
     ></div>
 
     <div
-      class="modal p-4 rounded shadow-2xl z-40 bg-[#1e1e1e] max-w-xs w-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl"
+      class="modal p-4 rounded shadow-2xl h-80 overflow-y-auto z-40 bg-[#1e1e1e] max-w-xs w-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 sm:max-w-sm md:max-w-md lg:max-w-lg lg:h-auto xl:max-w-xl"
     >
       <IconsXmark
         class="w-6 h-6 ml-auto cursor-pointer"

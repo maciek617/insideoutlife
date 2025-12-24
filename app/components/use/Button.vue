@@ -18,12 +18,7 @@ const props = defineProps<{
 
 <style>
 .btn-grad {
-  background-image: linear-gradient(
-    to right,
-    #ff512f 0%,
-    #f09819 51%,
-    #ff512f 100%
-  );
+  background-image: linear-gradient(to right, #f14d5c 0%, #fdc70c 100%);
 }
 .btn-grad {
   padding: 7px 25px;

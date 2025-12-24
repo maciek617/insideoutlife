@@ -9,7 +9,7 @@
         <UseButton text="Aplikacja" />
       </NuxtLink>
     </div>
-    <h1 class="text-center text-3xl lg:text-4xl xl:text-5xl">
+    <h1 class="text-center font-thin text-3xl lg:text-4xl xl:text-5xl">
       Czytaj. Inspiruj się. Działaj.
     </h1>
 
@@ -27,9 +27,12 @@
         />
       </div>
 
-      <p class="text-center mt-5" v-if="store.noMoreArticlesMsg">
-        Nie ma już więcej artykułów, wróć w przyszłości!
-      </p>
+      <div v-if="store.noMoreArticlesMsg" class="mt-10 mb-16">
+        <IconsAlertError class="w-24 h-24 mx-auto" />
+        <p class="text-center font-thin text-xl">
+          Nie ma już więcej artykułów, wróć w przyszłości!
+        </p>
+      </div>
       <UseButton
         v-if="!store.noMoreArticlesMsg"
         text="Załaduj więcej"

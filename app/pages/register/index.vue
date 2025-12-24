@@ -15,7 +15,11 @@
         <h1 class="text-3xl">Stwórz konto</h1>
         <p class="text-gray-400">
           Masz już konto?
-          <NuxtLink to="/login" class="text-orange-200">Zaloguj się</NuxtLink>
+          <NuxtLink
+            to="/login"
+            class="bg-clip-text text-transparent bg-gradient-to-r from-[#F14D5C] to-[#FDC70C]"
+            >Zaloguj się</NuxtLink
+          >
         </p>
       </div>
 
@@ -38,11 +42,17 @@
             <input type="checkbox" v-model="termsAccepted" />
             <p>
               Akceptuję
-              <NuxtLink to="/terms" target="_blank" class="text-orange-200"
+              <NuxtLink
+                to="/terms"
+                target="_blank"
+                class="bg-clip-text text-transparent bg-gradient-to-r from-[#F14D5C] to-[#FDC70C]"
                 >regulamin</NuxtLink
               >
               oraz
-              <NuxtLink to="/privacy" target="_blank" class="text-orange-200"
+              <NuxtLink
+                to="/privacy"
+                target="_blank"
+                class="bg-clip-text text-transparent bg-gradient-to-r from-[#F14D5C] to-[#FDC70C]"
                 >politykę prywatności</NuxtLink
               >
             </p>
