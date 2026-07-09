@@ -81,6 +81,11 @@
             📚 Artykuły
           </li>
         </NuxtLink>
+        <!-- <NuxtLink to="/app/challenges">
+          <li class="hover:bg-[#262626] p-2 rounded cursor-pointer">
+            🔥 Wyzwania
+          </li>
+        </NuxtLink> -->
         <NuxtLink to="/app/profile">
           <li class="hover:bg-[#262626] p-2 rounded cursor-pointer">
             👤 Profil
