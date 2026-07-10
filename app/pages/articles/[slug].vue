@@ -37,9 +37,35 @@ const store = useArticleStore();
 const route = useRoute();
 const slug = route.params.slug;
 
-onMounted(async () => {
-  store.fetchSingleArticle(slug);
+await store.fetchSingleArticle(slug);
+
+const article = computed(() => store.article);
+
+useSeoMeta({
+  title: () => store.article?.title,
+  description: () => store.article?.description,
+  ogType: "article",
+  ogTitle: () => store.article?.title,
+  ogDescription: () => store.article?.description,
 });
+
+useSchemaOrg([
+  {
+    "@type": "Article",
+    headline: () => article.value?.title,
+    description: () => article.value?.description,
+    datePublished: () => article.value?.created_at,
+    dateModified: () => article.value?.updated_at,
+    author: {
+      "@type": "Person",
+      name: "Maciej",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "InsideOutLife",
+    },
+  },
+]);
 </script>
 
 <style>

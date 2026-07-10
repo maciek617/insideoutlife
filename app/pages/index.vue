@@ -11,11 +11,17 @@
     <HomeFaq class="lg:mt-24" />
     <HomeNewsletter class="lg:mt-24" />
     <!-- <HomeMotivate /> -->
-     <HomeScrollUp/>
+    <HomeScrollUp />
   </div>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+useSeoMeta({
+  title: "Inside Out Life | Psychologia i rozwój osobisty",
+  description:
+    "Wsparcie psychologiczne, praca nad relacjami i rozwój osobisty. Poznaj Inside Out Life.",
+});
+</script>
 
 <style>
 .bg-button {

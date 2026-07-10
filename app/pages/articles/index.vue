@@ -47,9 +47,7 @@
 <script lang="ts" setup>
 const store = useArticleStore();
 
-onMounted(async () => {
-  await store.fetchAllArticles();
-});
+await store.fetchAllArticles();
 </script>
 
 <style></style>

@@ -6,6 +6,11 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ["~/assets/css/main.css"],
   app: {
+    head: {
+      htmlAttrs: {
+        lang: "pl",
+      },
+    },
     pageTransition: { name: "page", mode: "out-in" },
   },
   modules: [
@@ -16,6 +21,7 @@ export default defineNuxtConfig({
     "@nuxtjs/seo",
     "@nuxtjs/sitemap",
     "@pinia/nuxt",
+    "nuxt-schema-org",
   ],
   supabase: {
     redirect: false,
@@ -36,10 +42,20 @@ export default defineNuxtConfig({
     url: "https://insideoutlife.pl",
     name: "InsideOutLife - wsparcie dla mężczyzn",
     titleTemplate: "%s | InsideOutLife",
-    description: "Strona z artykułami i poradami dla mężczyzn po zdradzie",
+    description:
+      "InsideOutLife to wsparcie dla mężczyzn po zdradzie i rozstaniu. Artykuły, wiedza i narzędzia pomagające odbudować pewność siebie, emocje i relacje.",
     author: "Maciej",
-    twitter: "@twoj_twitter",
     ogImage: "/og-image.png",
     ogType: "website",
+    defaultLocale: "pl",
+  },
+  schemaOrg: {
+    identity: {
+      type: "Organization",
+      name: "InsideOutLife",
+      url: "https://insideoutlife.pl",
+      description:
+        "Wsparcie dla mężczyzn po zdradzie, artykuły i materiały dotyczące relacji, emocji i odbudowy siebie.",
+    },
   },
 });
