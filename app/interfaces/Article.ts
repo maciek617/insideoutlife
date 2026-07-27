@@ -22,6 +22,7 @@ export interface Article {
   read_time: string;
   tags: string[];
   summary: string;
+  sources: string[];
 }
 
 export interface ArticleLikes {

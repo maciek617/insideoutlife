@@ -10,10 +10,51 @@ export type Database = {
   // Allows to automatically instantiate createClient with right options
   // instead of createClient<Database, { PostgrestVersion: 'XX' }>(URL, KEY)
   __InternalSupabase: {
-    PostgrestVersion: "13.0.5"
+    PostgrestVersion: "14.5"
   }
   public: {
     Tables: {
+      "7daysleep": {
+        Row: {
+          badge_claimed: boolean | null
+          created_at: string
+          current_stage: number | null
+          id: string
+          is_done: boolean | null
+          max_stage: number | null
+          updated_at: string | null
+          user_id: string | null
+        }
+        Insert: {
+          badge_claimed?: boolean | null
+          created_at?: string
+          current_stage?: number | null
+          id: string
+          is_done?: boolean | null
+          max_stage?: number | null
+          updated_at?: string | null
+          user_id?: string | null
+        }
+        Update: {
+          badge_claimed?: boolean | null
+          created_at?: string
+          current_stage?: number | null
+          id?: string
+          is_done?: boolean | null
+          max_stage?: number | null
+          updated_at?: string | null
+          user_id?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "7daysleep_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "users"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       article_likes: {
         Row: {
           article_id: string | null
@@ -52,6 +93,8 @@ export type Database = {
           published: boolean | null
           read_time: string | null
           slug: string
+          sources: string[] | null
+          summary: string | null
           tags: string[] | null
           title: string
           updated_at: string | null
@@ -64,6 +107,8 @@ export type Database = {
           published?: boolean | null
           read_time?: string | null
           slug: string
+          sources?: string[] | null
+          summary?: string | null
           tags?: string[] | null
           title: string
           updated_at?: string | null
@@ -76,6 +121,8 @@ export type Database = {
           published?: boolean | null
           read_time?: string | null
           slug?: string
+          sources?: string[] | null
+          summary?: string | null
           tags?: string[] | null
           title?: string
           updated_at?: string | null
@@ -439,21 +486,27 @@ export type Database = {
       }
       users: {
         Row: {
+          active_badge: string | null
           avatar: string | null
+          badges: string[] | null
           created_at: string | null
           email: string
           id: string
           nick: string
         }
         Insert: {
+          active_badge?: string | null
           avatar?: string | null
+          badges?: string[] | null
           created_at?: string | null
           email: string
           id?: string
           nick: string
         }
         Update: {
+          active_badge?: string | null
           avatar?: string | null
+          badges?: string[] | null
           created_at?: string | null
           email?: string
           id?: string

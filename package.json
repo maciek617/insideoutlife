@@ -8,7 +8,7 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "gen:types": "supabase gen types typescript --project-id yaseoquxnnvobzpbzkfh --schema public > app/types/supabase.ts"
+    "gen:types": "supabase gen types typescript --project-id issffofdblhrwnvtqmqp --schema public > app/types/supabase.ts"
   },
   "dependencies": {
     "@nuxt/fonts": "^0.11.4",

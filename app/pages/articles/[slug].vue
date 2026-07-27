@@ -21,6 +21,7 @@
       <ArticleSocial />
       <div :class="store.isNightTime ? 'blue-filter' : ''">
         <ArticleContent />
+        <ArticleSources />
         <ArticleSuggestion />
         <UseInvite />
       </div>

@@ -7,10 +7,11 @@
         text="Tę zakładkę widzisz tylko ty, możesz tutaj zmienić hasło, usunąć konto, podglądnąć twoje statystyki, wybrać badge a także zmienić pseudonim."
       />
 
-
       <ProfileWelcome :nick="userData.nick" />
 
       <ProfileMain :nick="userData.nick" />
+
+      <ProfileBadgeGallery />
 
       <ProfileStats
         :user-comments-count="userCommentsCount"
@@ -42,8 +43,6 @@ onMounted(async () => {
   await getUserPostsCount();
   await getUserCommentsCount();
 });
-
-
 </script>
 
 <style></style>

@@ -39,7 +39,7 @@
 </template>
 
 <script lang="ts" setup>
-const images = ref(["/1.png", "/2.png", "/3.png"]);
+const images = ref(["/1.webp", "/2.webp", "/3.webp"]);
 const currentImage = ref(0);
 </script>
 

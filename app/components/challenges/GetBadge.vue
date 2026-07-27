@@ -4,14 +4,16 @@
       Wykonałeś już wszystkie zadania!
     </p>
     <p class="font-thin text-gray-300 mt-2">
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus
-      cum aliquid!
+      Kliknij przycisk odbierz nagrodę, aby odebrać swoją odznakę!
     </p>
 
-    <div class="mt-10 lg:flex lg:items-center lg:gap-10">
-      <div class="w-32 h-32 rounded-full bg-red-400"></div>
+    <div
+      class="mt-10 flex flex-col items-start lg:items-center lg:flex-row gap-10"
+    >
+      <BadgesSleep />
       <button
-        class="font-bold shadow bg-[#6FFF00] text-black rounded-full px-5 py-1.5 mt-4 cursor-pointer hover:text-black hover:bg-white transition-colors"
+        @click="$emit('getBadge')"
+        class="font-bold shadow bg-[#6FFF00] text-black rounded-full px-5 py-1.5 mt-4 cursor-pointer hover:text-black hover:bg-white transition-colors lg:mt-0"
       >
         Odbierz nagodę!
       </button>
@@ -19,6 +21,8 @@
   </div>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+defineEmits(["getBadge"]);
+</script>
 
 <style></style>

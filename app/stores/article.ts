@@ -137,6 +137,7 @@ export const useArticleStore = defineStore("article", () => {
     showSummary.value = !showSummary.value;
   };
 
+
   return {
     fetchSingleArticle,
     article,

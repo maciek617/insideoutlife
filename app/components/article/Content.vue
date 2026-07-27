@@ -13,7 +13,7 @@
     ></article>
 
     <!-- Cytat -->
-     
+
     <blockquote
       v-else-if="block.type === 'quote'"
       class="border-l-4 pl-4 italic text-gray-400 lg:text-xl lg:py-6"

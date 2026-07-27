@@ -49,10 +49,13 @@
         <NuxtLink to="/articles">
           <li class="bg-[#262626] p-2 rounded shadow-lg">📚</li>
         </NuxtLink>
-
-        <NuxtLink to="/app/profile">
-          <li class="bg-[#262626] p-2 rounded shadow-lg">👤</li>
+        <NuxtLink to="/app/challenges">
+          <li class="bg-[#262626] p-2 rounded shadow-lg">🔥</li>
         </NuxtLink>
+
+        <!-- <NuxtLink to="/app/profile">
+          <li class="bg-[#262626] p-2 rounded shadow-lg">👤</li>
+        </NuxtLink> -->
       </ul>
     </nav>
 
@@ -81,11 +84,11 @@
             📚 Artykuły
           </li>
         </NuxtLink>
-        <!-- <NuxtLink to="/app/challenges">
+        <NuxtLink to="/app/challenges">
           <li class="hover:bg-[#262626] p-2 rounded cursor-pointer">
             🔥 Wyzwania
           </li>
-        </NuxtLink> -->
+        </NuxtLink>
         <NuxtLink to="/app/profile">
           <li class="hover:bg-[#262626] p-2 rounded cursor-pointer">
             👤 Profil

@@ -14,7 +14,7 @@
         <p class="hover:text-gray-200 cursor-pointer">Regulamin</p>
       </nuxt-link>
     </div>
-    <p>&copy; 2025 InsideOutLife.</p>
+    <p>&copy; {{ new Date().getFullYear() }} InsideOutLife.pl</p>
   </footer>
 </template>
 
