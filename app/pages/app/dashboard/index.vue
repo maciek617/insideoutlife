@@ -24,6 +24,16 @@
         />
 
         <DashboardWidget
+          v-if="!entry"
+          title="🔔 Ryzyko zdrady"
+          text="Nowe narzędzie umożliwiające obliczenie ryzyka zdrady ze strony kobiety"
+          link="/risk"
+          :button="true"
+          btn-text="Dowiedz się więcej"
+          class="flex-1"
+        />
+
+        <DashboardWidget
           title="👨🏼‍⚕️ Psycholog"
           text="Jeśli masz wiedzę psychologiczną i chcesz pomóc osobom, które tego potrzebują napisz na: kontakt@insideoutlife.pl"
           link="/"

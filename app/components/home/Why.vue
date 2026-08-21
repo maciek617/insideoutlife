@@ -42,6 +42,30 @@
         </div>
       </div>
     </div>
+
+    <div class="mt-10 flg:mt-20 xl:mt-32">
+      <div
+        class="flex items-center flex-col-reverse lg:flex-row-reverse lg:justify-around lg:items-start w-full"
+      >
+        <div class="relative max-w-sm w-full mt-10 lg:-mt-10">
+          <div
+            class="absolute -mt-8 top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-32 z-10 h-32 rounded-full bg-gradient-to-r from-[#F14D5C] to-[#FDC70C] blur-3xl"
+          ></div>
+          <IconsBell class="max-w-[250px] w-full mx-auto" />
+        </div>
+        <div>
+          <HomeHeader text="Ryzyko zdrady" />
+          <p class="text-gray-300 max-w-xl font-thin lg:mt-2 lg:text-lg">
+            Chcesz wiedzieć, czy możesz być pewny swojej kobiety? Skorzystaj z
+            autorskiego algorytmu opartego na rzetelnej analizie. Być może od
+            dzisiaj będziesz spał spokojnie!
+          </p>
+          <NuxtLink to="/risk">
+            <UseButton text="Dowiedz się więcej" class="mt-8" />
+          </NuxtLink>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 

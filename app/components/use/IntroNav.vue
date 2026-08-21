@@ -16,6 +16,9 @@
           <NuxtLink to="/articles"> Artykuły </NuxtLink>
         </li>
         <li class="cursor-pointer hover:text-orange-400 transition-all">
+          <NuxtLink to="/risk"> Ryzyko zdrady </NuxtLink>
+        </li>
+        <li class="cursor-pointer hover:text-orange-400 transition-all">
           <NuxtLink to="/tools"> Dodatkowe narzędzia </NuxtLink>
         </li>
         <li class="cursor-pointer hover:text-orange-400 transition-all">

@@ -3,6 +3,7 @@
     <div class="flex justify-center lg:justify-around">
       <div>
         <h1
+          title="Nie jesteś sam"
           class="font-bold text-4xl max-w-lg text-center lg:text-5xl lg:text-left xl:text-7xl"
         >
           Nie jesteś sam <span class="text-[#ff512f]">Inside</span

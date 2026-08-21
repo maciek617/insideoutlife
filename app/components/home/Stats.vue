@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="mt-10">
     <HomeHeader text="Zdrowie psychiczne" />
     <p class="text-gray-300 max-w-3xl font-thin lg:mt-4 lg:text-lg">
       Poniżej przedstawiono, kilka danych statystycznych związanych ze zdrowiem
