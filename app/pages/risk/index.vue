@@ -4,7 +4,7 @@
 
     <div class="flex justify-between flex-wrap">
       <div class="mt-16">
-        <p class="text-2xl uppercase font-bold mb-5">Zielone flagi</p>
+        <p class="text-2xl uppercase font-bold mb-5"><span class="text-green-400">Zielone</span> flagi</p>
         <div v-for="gFlag in greenFlags"">
           <div
             @click="addFlagToBase(gFlag)"
@@ -21,7 +21,7 @@
       </div>
 
       <div class="mt-16">
-         <p class="text-2xl uppercase font-bold mb-5">Czerwone flagi</p>
+         <p class="text-2xl uppercase font-bold mb-5"><span class="text-red-400">Czerwone</span> flagi</p>
         <div v-for="rFlag in redFlags">
           <div
             @click="addFlagToBase(rFlag)"
@@ -93,6 +93,7 @@ const calculateScore = () => {
 
   totalScore.value = greenScore.value + redScore.value;
 
+
   // most positive factor
   positiveFactor.value = flagData.value.reduce((max, flag) => {
     return flag.weight > max.weight ? flag : max;
@@ -104,7 +105,16 @@ const calculateScore = () => {
   return flag.weight < min.weight ? flag : min;
 }).name;
 
-  showOutputScoreMessage(totalScore.value)
+  if(greenScore.value === 0) {
+    positiveFactor.value = "Brak"
+  }
+
+   if(redScore.value === 0) {
+      negativeFactor.value = "Brak";
+      risk.value = "Praktycznie zerowa / niemożliwa"
+    } else {
+      showOutputScoreMessage(totalScore.value)
+    }
 };
 
 const showOutputScoreMessage = (score: number) => {
@@ -123,7 +133,7 @@ const showOutputScoreMessage = (score: number) => {
 
   if (criticalCount.value >= 3) {
     risk.value = "Ekstremalnie duża";
-  } else if (criticalCount.value === 2 && score <= 0) {
+  } else if (criticalCount.value === 2 && score <= 25) {
     risk.value = "Duża";
   } else if (criticalCount.value === 1 && score <= 10) {
     risk.value = "Umiarkowanie duża";

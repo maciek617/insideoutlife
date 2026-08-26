@@ -4,10 +4,12 @@
   </NuxtLink>
 
   <div class="mt-10 lg:mt-12 xl:mt-14">
-    <h1 class="text-2xl max-w-xl lg:text-3xl xl:text-4xl 2xl:text-5xl">
+    <h1
+      class="text-2xl max-w-2xl font-medium lg:text-3xl xl:text-4xl 2xl:text-6xl"
+    >
       Sprawdź ryzyko zdrady swojej kobiety
     </h1>
-    <p class="font-thin mt-4 max-w-5xl">
+    <p class="font-thin mt-4 max-w-5xl lg:mt-7">
       Jest to autorski algorytm opracowany na bazie setek przypadków, każdy
       wiersz ma znaczenie oraz inną wartość oczywiście w losowej kolejności dla
       zachowania pełnej skuteczności algorytmu. Zaznacz wszystkie
@@ -17,7 +19,7 @@
       przycisk "Oszacuj szansę" na dole strony. Algorytm obliczy ryzyko dając Ci
       pełny obraz wyniku.
     </p>
-    <p class="font-thin text-[10px] mt-4 lg:text-[12px]">
+    <p class="font-thin text-[10px] mt-4 max-w-3xl lg:text-[12px]">
       *Pamiętaj, że jest to tylko i wyłącznie narzędzie poglądowe. Nie zastąpi
       specjalistycznych badań ani konsultacji ze specjalistami. Korzystasz na
       własną odpowiedzialność. InsideOutLife nie ponosi żadnej odpowiedzialności
