@@ -6,19 +6,29 @@
       Otrzymaj pomoc dzięki
       <span
         class="bg-clip-text text-transparent bg-gradient-to-r from-[#F14D5C] to-[#FDC70C]"
-        >+5</span
+        >+{{ props.counter }}</span
       >
-      dostępnych aplikacji
+      {{ props.isApp ? "dostępnych aplikacji" : "książek psychologicznych" }}
     </h1>
     <p
       class="mt-4 text-center font-thin text-gray-300 max-w-xl mx-auto xl:text-lg"
     >
       Sięganie po pomoc nie jest oznaką słabości, skorzystaj z dostępnych
-      aplikacji być może, któraś z nich Ci pomoże.
+      {{ props.isApp ? "aplikacji" : "książek" }} być może, któraś z nich Ci
+      pomoże.
+    </p>
+    <p class="text-center mt-2 text-sm text-gray-400" v-if="!props.isApp">
+      *Insideoutlife nie czerpie żadnych korzyści finansowych w związku z
+      zakupem książki z podanych linków
     </p>
   </div>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+const props = defineProps({
+  isApp: Boolean,
+  counter: Number,
+});
+</script>
 
 <style></style>
