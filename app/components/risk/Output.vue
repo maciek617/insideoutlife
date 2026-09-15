@@ -33,6 +33,12 @@
     <p class="mt-10">
       Im większy wynik tym lepiej. Im mniej krytycznych czynników tym lepiej!
     </p>
+    <p
+      @click="$emit('reset')"
+      class="mt-5 text-orange-400 underline cursor-pointer uppercase font-bold tracking-wider"
+    >
+      Zresetuj
+    </p>
   </div>
 </template>
 
@@ -46,6 +52,8 @@ const props = defineProps({
   positiveFactor: String,
   negativeFactor: String,
 });
+
+defineEmits(["reset"]);
 </script>
 
 <style></style>

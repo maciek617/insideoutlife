@@ -42,7 +42,7 @@
       <h2 class="text-2xl uppercase font-bold mb-4 lg:text-3xl 2xl:text-4xl">Sprawdź wynik</h2>
       <UseButton text="Oszacuj szansę" @click="calculateScore"/>
       <p class="mt-2 text-red-400" v-if="showError">Najpierw zaznacz flagi!</p>
-      <RiskOutput v-if="startCalc" :green-score="greenScore" :red-score="redScore" :total-score="totalScore" :risk="risk" :positive-factor="positiveFactor" :negative-factor="negativeFactor" :critical-count="criticalCount"/>
+      <RiskOutput v-if="startCalc" :green-score="greenScore" :red-score="redScore" :total-score="totalScore" :risk="risk" :positive-factor="positiveFactor" :negative-factor="negativeFactor" :critical-count="criticalCount" @reset="$router.go(0)"/>
     </div>
   </div>
 </template>
