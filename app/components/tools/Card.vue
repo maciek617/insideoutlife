@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-[#212121] max-w-xs p-4 rounded-lg shadow-xl w-full h-52 lg:max-w-sm"
+    class="bg-[#212121] max-w-xs p-4 rounded-lg shadow-xl w-full  lg:max-w-sm"
   >
     <div class="flex flex-col justify-between h-full">
       <div>
@@ -8,7 +8,7 @@
           <p class="font-bold text-xl">{{ props.title }}</p>
           <UseBadge v-if="props.isVerified" />
         </div>
-        <p class="text-[#dddddd] mt-2">{{ props.desc }}</p>
+        <p class="text-[#dddddd] mt-2 pb-5">{{ props.desc }}</p>
       </div>
 
       <NuxtLink :to="props.link" target="_blank">
