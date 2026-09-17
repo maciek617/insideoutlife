@@ -19,12 +19,14 @@
       </div>
     </div>
 
-    <div class="relative flex items-center justify-center mt-10">
+    <div
+      class="relative flex items-center justify-center mt-10 flex-col gap-4 md:flex-row"
+    >
       <div
         class="absolute mt-2 top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 max-w-sm w-full z-10 h-8 bg-gradient-to-r from-[#F14D5C] to-[#FDC70C] blur-3xl"
       ></div>
       <div
-        class="border border-gray-500 py-2 px-6 rounded-full flex items-center gap-2 md:gap-10 md:px-6 lg:px-10 xl:gap-14"
+        class="w-full border border-gray-500 py-2 px-6 rounded-full flex items-center gap-2 max-w-sm md:gap-10 md:px-6 lg:px-10 xl:gap-14"
       >
         <div class="flex flex-col relative z-10">
           <label>Adres e-mail</label>
@@ -35,8 +37,8 @@
             class="outline-0 py-2"
           />
         </div>
-        <UseButton text="Dołącz" @click="handleSubmit" />
       </div>
+      <UseButton text="Dołącz" @click="handleSubmit" />
     </div>
 
     <p v-if="emailError" class="text-center text-red-500 text-sm mt-4">
