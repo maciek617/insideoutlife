@@ -46,7 +46,9 @@
 
 <script lang="ts" setup>
 const store = useArticleStore();
-
+definePageMeta({
+  layout: "default-no-app",
+});
 await store.fetchAllArticles();
 </script>
 

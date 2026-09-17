@@ -7,6 +7,9 @@
         <UseButton text="Powrót" />
       </NuxtLink>
 
+      <NuxtLink to="/app/dashboard" v-if="store.user?.id">
+        <UseButton text="Aplikacja" class="ml-5" />
+      </NuxtLink>
       <ArticleProgress />
 
       <div :class="store.isNightTime ? 'blue-filter' : ''">
@@ -41,6 +44,10 @@ const slug = route.params.slug;
 await store.fetchSingleArticle(slug);
 
 const article = computed(() => store.article);
+
+definePageMeta({
+  layout: "default-no-app",
+});
 
 useSeoMeta({
   title: () => store.article?.title,

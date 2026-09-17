@@ -3,7 +3,6 @@
     <NuxtLink to="/app/challenges">
       <UseButton text="Powrót" />
     </NuxtLink>
-
     <div class="text-white mt-8">
       <h1 class="text-2xl lg:text-3xl 2xl:text-4xl">Projekt: JA🔥</h1>
 

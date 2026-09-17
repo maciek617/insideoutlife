@@ -1,9 +1,9 @@
 <template>
-  <div class="container mx-auto min-h-screen p-5 text-white">
+  <div class="container mx-auto min-h-screen p-4 pt-20 text-white">
     <NuxtLink to="/app/challenges">
       <UseButton text="Powrót" />
     </NuxtLink>
-
+    <UseNav class="flex-1" />
     <div v-if="badgeClaimed" class="mt-10 text-center">
       <p class="text-xl">Gratulacje! Odebrałeś już swoją odznakę!</p>
 

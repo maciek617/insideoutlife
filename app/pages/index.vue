@@ -16,6 +16,9 @@
 </template>
 
 <script lang="ts" setup>
+definePageMeta({
+  layout: 'default-no-app'
+})
 useSeoMeta({
   title: "Inside Out Life | Psychologia i rozwój osobisty",
   description:

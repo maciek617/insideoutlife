@@ -14,14 +14,29 @@
             {{ userData?.nick.slice(0, 2) }}
           </div>
           <div
-            class="absolute w-[100px] bg-[#212121] right-0 text-white rounded shadow"
+            class="absolute w-[130px] bg-[#212121] right-0 text-white rounded shadow"
             v-if="showTopNav"
           >
             <NuxtLink to="/app/profile">
               <p class="cursor-pointer hover:bg-[#555555] px-2 py-2">Profil</p>
             </NuxtLink>
+            <NuxtLink to="/">
+              <p class="cursor-pointer hover:bg-[#555555] px-2 py-2">
+                Strona główna
+              </p>
+            </NuxtLink>
+            <NuxtLink to="/risk">
+              <p class="cursor-pointer hover:bg-[#555555] px-2 py-2">
+                Ryzyko zdrady
+              </p>
+            </NuxtLink>
+            <NuxtLink to="/tools">
+              <p class="cursor-pointer hover:bg-[#555555] px-2 py-2">
+                Dodatkowe narzędzia
+              </p>
+            </NuxtLink>
             <p
-              class="cursor-pointer hover:bg-[#555555] px-2 py-2"
+              class="cursor-pointer hover:bg-[#555555] px-2 py-2 border-t pt-4"
               @click="signOut"
             >
               Wyloguj się

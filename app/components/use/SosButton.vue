@@ -4,7 +4,7 @@
     <button
       type="button"
       aria-label="Otwórz pomoc SOS"
-      class="fixed bottom-6 left-6 z-40 flex items-center gap-2 rounded-full bg-red-600 px-5 py-3 text-sm font-bold text-white shadow-lg shadow-red-600/30 cursor-pointer transition hover:-translate-y-0.5 hover:bg-red-700 hover:shadow-xl active:translate-y-0"
+      class="flex items-center gap-2 rounded-full bg-red-600 px-5 py-3 text-sm font-bold text-white shadow-lg shadow-red-600/30 cursor-pointer transition hover:-translate-y-0.5 hover:bg-red-700 hover:shadow-xl active:translate-y-0"
       @click="openSos"
     >
       <span

@@ -24,7 +24,6 @@
         />
 
         <DashboardWidget
-          v-if="!entry"
           title="🔔 Ryzyko zdrady"
           text="Nowe narzędzie umożliwiające obliczenie ryzyka zdrady ze strony kobiety"
           link="/risk"

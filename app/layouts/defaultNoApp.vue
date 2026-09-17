@@ -8,7 +8,7 @@ import SosButton from "~/components/use/SosButton.vue";
       <slot />
     </div>
 
-    <SosButton class="fixed bottom-20 left-6 z-40 lg:bottom-6" />
+    <SosButton class="fixed bottom-6 left-6 z-40" />
     <UseFooter />
   </div>
 </template>
