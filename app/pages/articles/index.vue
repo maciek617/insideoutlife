@@ -45,6 +45,21 @@
 </template>
 
 <script lang="ts" setup>
+useSeoMeta({
+  title: "Artykuły o zdradzie, relacjach i emocjach",
+  description:
+    "Artykuły dla mężczyzn o zdradzie, rozstaniu, relacjach, emocjach, zazdrości i odbudowie pewności siebie. Wiedza, która pomaga lepiej rozumieć siebie i związki.",
+
+  ogTitle: "Artykuły o zdradzie, relacjach i emocjach | InsideOutLife",
+  ogDescription:
+    "Wiedza o zdradzie, relacjach, emocjach, zazdrości i odbudowie siebie po trudnych doświadczeniach.",
+  ogType: "website",
+  ogUrl: "https://insideoutlife.pl/articles",
+  ogSiteName: "InsideOutLife",
+  ogLocale: "pl_PL",
+
+  twitterCard: "summary_large_image",
+});
 const store = useArticleStore();
 definePageMeta({
   layout: "default-no-app",

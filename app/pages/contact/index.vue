@@ -8,6 +8,18 @@
   </div>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+useSeoMeta({
+  title: "Kontakt",
+  description: "Masz pytanie? a może plan? wpadnij do InsideOutLife.",
+
+  ogTitle: "Kontakt | InsideOutLife",
+  ogDescription: "Masz pytanie? a może plan? wpadnij do InsideOutLife.",
+  ogType: "website",
+  ogUrl: "https://insideoutlife.pl/contact",
+  ogSiteName: "InsideOutLife",
+  ogLocale: "pl_PL",
+});
+</script>
 
 <style></style>

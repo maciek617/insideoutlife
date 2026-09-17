@@ -43,6 +43,20 @@
 </template>
 
 <script lang="ts" setup>
+useSeoMeta({
+  title: "Aplikacje i książki, gdzie znajdziesz pomoc",
+  description:
+    "Znajdź aplikacje, strony internetowe, książki wsparcia i materiały stworzone z myślą o zdrowiu psychicznym oraz problemach, z którymi możesz mierzyć się na co dzień.",
+
+  ogTitle: "Aplikacje i miejsca, gdzie znajdziesz pomoc | InsideOutLife",
+  ogDescription:
+    "Zebraliśmy aplikacje, telefony wsparcia, poradniki i sprawdzone źródła pomocy dla mężczyzn.",
+  ogType: "website",
+  ogUrl: "https://insideoutlife.pl/tools",
+  ogSiteName: "InsideOutLife",
+  ogLocale: "pl_PL",
+});
+
 const appInfoBase = ref([
   {
     title: "Bratbratu.org",

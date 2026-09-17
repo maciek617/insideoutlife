@@ -79,6 +79,22 @@
 <script setup>
 import { useAuth } from "#imports";
 
+useSeoMeta({
+  title: "Rejestracja",
+  description:
+    "Zarejestruj się do na InsideOutLife, aby korzystać ze swoich zapisanych danych i funkcji aplikacji.",
+
+  ogType: "website",
+  ogTitle: "Logowanie | InsideOutLife",
+  ogDescription:
+    "Rejestracja konta InsideOutLife.",
+  ogUrl: "https://insideoutlife.pl/login",
+  ogSiteName: "InsideOutLife",
+  ogLocale: "pl_PL",
+
+  robots: "noindex, nofollow",
+});
+
 definePageMeta({
   middleware: "not-auth",
 });
