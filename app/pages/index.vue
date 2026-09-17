@@ -20,9 +20,17 @@ definePageMeta({
   layout: 'default-no-app'
 })
 useSeoMeta({
-  title: "Inside Out Life | Psychologia i rozwój osobisty",
+  title: "Wsparcie dla mężczyzn po zdradzie i rozstaniu",
   description:
-    "Wsparcie psychologiczne, praca nad relacjami i rozwój osobisty. Poznaj Inside Out Life.",
+    "InsideOutLife pomaga mężczyznom po zdradzie i rozstaniu lepiej zrozumieć emocje, odbudować pewność siebie i świadomie budować kolejne relacje.",
+
+  ogTitle: "InsideOutLife – wsparcie dla mężczyzn po zdradzie i rozstaniu",
+  ogDescription:
+    "Wiedza, narzędzia i materiały pomagające zrozumieć emocje, odbudować pewność siebie i relacje.",
+  ogType: "website",
+  ogUrl: "https://insideoutlife.pl",
+  ogSiteName: "InsideOutLife",
+  ogLocale: "pl_PL",
 });
 </script>
 

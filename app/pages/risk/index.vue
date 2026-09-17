@@ -49,6 +49,20 @@
 
 <script lang="ts" setup>
 import { type RelationshipFlag } from "~/types/flag";
+useSeoMeta({
+  title: "Ryzyko zdrady – sprawdź ryzyko zdrady swojej kobiety",
+  description:
+    "Sprawdź sygnały, które mogą wskazywać na problemy z zaufaniem i granicami w związku. Skorzystaj z narzędzia InsideOutLife i przeanalizuj zielone oraz czerwone flagi.",
+
+  ogTitle: "Ryzyko zdrady – sprawdź ryzyko zdrady swojej kobiety | InsideOutLife",
+  ogDescription:
+    "Przeanalizuj zielone i czerwone flagi w swoim związku i zobacz, jakie sygnały mogą wskazywać na problemy z zaufaniem lub granicami.",
+  ogType: "website",
+  ogUrl: "https://insideoutlife.pl/risk",
+  ogSiteName: "InsideOutLife",
+  ogLocale: "pl_PL",
+});
+
 const flagData = ref<Array<RelationshipFlag>>([]);
 const greenScore = ref(0);
 const redScore = ref(0);

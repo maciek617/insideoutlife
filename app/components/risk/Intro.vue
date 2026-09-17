@@ -20,10 +20,11 @@
       pełny obraz wyniku.
     </p>
     <p class="font-thin text-[10px] mt-4 max-w-3xl lg:text-[12px]">
-      *Pamiętaj, że jest to tylko i wyłącznie narzędzie poglądowe. Nie zastąpi
-      specjalistycznych badań ani konsultacji ze specjalistami. Korzystasz na
-      własną odpowiedzialność. InsideOutLife nie ponosi żadnej odpowiedzialności
-      za decyzje podjęte w związku z wynikiem!
+      *To narzędzie ma charakter orientacyjny. Pomaga uporządkować obserwacje
+      dotyczące komunikacji, granic, zaufania i zachowania w związku. Nie
+      pozwala przewidzieć, czy partnerka faktycznie dopuści się zdrady.
+      InsideOutLife nie ponosi żadnej odpowiedzialności za decyzje podjęte w
+      związku z wynikiem!
     </p>
   </div>
 </template>

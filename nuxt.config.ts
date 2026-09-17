@@ -37,25 +37,25 @@ export default defineNuxtConfig({
       supabaseAnonKey: process.env.SUPABASE_KEY, // 👀 tylko anon key na froncie
     },
   },
-  site: {
-    baseUrl: "https://insideoutlife.pl",
+ site: {
+  baseUrl: "https://insideoutlife.pl",
+  url: "https://insideoutlife.pl",
+  name: "InsideOutLife",
+  titleTemplate: "%s | InsideOutLife",
+  description:
+    "InsideOutLife wspiera mężczyzn po zdradzie i rozstaniu. Znajdziesz tu wiedzę o emocjach, relacjach, pewności siebie i odbudowie siebie.",
+  author: "InsideOutLife",
+  ogType: "website",
+  defaultLocale: "pl",
+},
+
+schemaOrg: {
+  identity: {
+    type: "Organization",
+    name: "InsideOutLife",
     url: "https://insideoutlife.pl",
-    name: "InsideOutLife - wsparcie dla mężczyzn",
-    titleTemplate: "%s | InsideOutLife",
     description:
-      "InsideOutLife to wsparcie dla mężczyzn po zdradzie i rozstaniu. Artykuły, wiedza i narzędzia pomagające odbudować pewność siebie, emocje i relacje.",
-    author: "Maciej",
-    ogImage: "/og-image.png",
-    ogType: "website",
-    defaultLocale: "pl",
+      "Wsparcie dla mężczyzn po zdradzie i rozstaniu oraz materiały dotyczące emocji, relacji, pewności siebie i rozwoju osobistego.",
   },
-  schemaOrg: {
-    identity: {
-      type: "Organization",
-      name: "InsideOutLife",
-      url: "https://insideoutlife.pl",
-      description:
-        "Wsparcie dla mężczyzn po zdradzie, artykuły i materiały dotyczące relacji, emocji i odbudowy siebie.",
-    },
-  },
+},
 });
